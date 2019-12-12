@@ -2,14 +2,20 @@
 
 ## Dependencies
 
-## Design System 
+### Design System 
 
 We are using the [VTEX Design system](https://styleguide.vtex.com/)
 
-## Routing
+### Routing
 
 Reach router https://reach.tech/router 
 
 ## Setup
 
 Generated with `create-react-app` (doc [here](./CREATE-REACT-APP.md)).
+
+## Assets
+
+### Icon
+
+["Air, alchemy, minimal, spiritual icon" by vinod velayudhan](https://www.iconfinder.com/icons/1328803/air_alchemy_minimal_spiritual_icon)  - [CC License](https://creativecommons.org/licenses/by/3.0/)
