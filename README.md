@@ -1,4 +1,4 @@
-# Rebrew
+# Rebrew [![CodeFactor](https://www.codefactor.io/repository/github/carvallegro/rebrew/badge)](https://www.codefactor.io/repository/github/carvallegro/rebrew)
 
 ## Dependencies
 

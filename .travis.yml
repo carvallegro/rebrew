@@ -1,0 +1,39 @@
+language: node_js
+node_js:
+- 10.15.1
+
+cache:
+  yarn: true
+  directories:
+    - node_modules
+
+branches:
+  except:
+    - gh-pages
+
+install:
+  - yarn install --force
+  - yarn global add codecov
+
+jobs:
+  include:
+    - stage: test
+      name: "Test"
+      script: yarn test
+    - name: "Coverage"
+      script: codecov
+    - stage: build
+      name: "Build & Deploy"
+      script: yarn build
+      deploy:
+        local-dir: build
+        provider: pages
+        skip-cleanup: true
+        github-token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
+        keep-history: true
+        on:
+          branch: master
+
+stages:
+  - name: test
+  - name: build
