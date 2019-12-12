@@ -2,6 +2,7 @@
   "name": "rebrew",
   "version": "0.1.0",
   "private": true,
+  "basepage": "https://carvallegro.github.io/rebrew",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
