@@ -2,7 +2,7 @@
   "name": "rebrew",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://carvallegro.github.io/rebrew",
+  "homepage": "https://rebrew.barely.engineering",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
