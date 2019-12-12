@@ -1,0 +1,250 @@
+[
+  {
+    "name": "Barbarian",
+    "hit_die": 12,
+    "combat_resource": "Rage",
+    "skills_count_choose": 2,
+    "skills": ["Animal Handling", "Athletics", "Intimidation", "Nature", "Perception", "Survival"],
+    "saving_throws": ["CON", "STR"],
+    "level_for_subclass": 3,
+    "levels_for_asi_bonuses": [4,8,12,16,19],
+    "class_features": [
+      {
+        "name": "Unarmored Defense",
+        "desc": "While you are not wearing any armor, your Armor Class equals 10 + your Dexterity modifier + your Constitution modifier. You can use a shield and still gain this benefit.",
+        "level": 1
+      },
+      {
+        "name": "Reckless Attack",
+        "desc": "Starting at 2nd level, you can throw aside all concern for defense to attack with fierce desperation. When you make your first attack on your turn, you can decide to attack recklessly. Doing so gives you advantage on melee weapon attack rolls using Strength during this turn, but attack rolls against you have advantage until your next turn.",
+        "level": 2
+      }
+    ],
+    "levels": [
+      {
+        "number": 1,
+        "prof_bonus": 2,
+        "spells_levels": [2, 0, 0, 0, 0, 0, 0, 0, 0]
+      },
+      {
+        "number": 2,
+        "prof_bonus": 2,
+        "spells_levels": [2, 0, 0, 0, 0, 0, 0, 0, 0]
+      },
+      {
+        "number": 3,
+        "prof_bonus": 2,
+        "spells_levels": [3, 0, 0, 0, 0, 0, 0, 0, 0]
+      },
+      {
+        "number": 4,
+        "prof_bonus": 2,
+        "spells_levels": [3, 0, 0, 0, 0, 0, 0, 0, 0]
+      },
+      {
+        "number": 5,
+        "prof_bonus": 3,
+        "spells_levels": [4, 2, 0, 0, 0, 0, 0, 0, 0]
+      },
+      {
+        "number": 6,
+        "prof_bonus": 3,
+        "spells_levels": [4, 2, 0, 0, 0, 0, 0, 0, 0]
+      },
+      {
+        "number": 7,
+        "prof_bonus": 3,
+        "spells_levels": [4, 3, 0, 0, 0, 0, 0, 0, 0]
+      },
+      {
+        "number": 8,
+        "prof_bonus": 3,
+        "spells_levels": [4, 3, 0, 0, 0, 0, 0, 0, 0]
+      },
+      {
+        "number": 9,
+        "prof_bonus": 4,
+        "spells_levels": [4, 3, 2, 0, 0, 0, 0, 0, 0]
+      },
+      {
+        "number": 10,
+        "prof_bonus": 4,
+        "spells_levels": [4, 3, 2, 0, 0, 0, 0, 0, 0]
+      },
+      {
+        "number": 11,
+        "prof_bonus": 4,
+        "spells_levels": [4, 3, 3, 0, 0, 0, 0, 0, 0]
+      },
+      {
+        "number": 12,
+        "prof_bonus": 4,
+        "spells_levels": [4, 3, 3, 0, 0, 0, 0, 0, 0]
+      },
+      {
+        "number": 13,
+        "prof_bonus": 4,
+        "spells_levels": [4, 3, 3, 1, 0, 0, 0, 0, 0]
+      },
+      {
+        "number": 14,
+        "prof_bonus": 5,
+        "spells_levels": [4, 3, 3, 1, 0, 0, 0, 0, 0]
+      },
+      {
+        "number": 15,
+        "prof_bonus": 5,
+        "spells_levels": [4, 3, 3, 2, 0, 0, 0, 0, 0]
+      },
+      {
+        "number": 16,
+        "prof_bonus": 5,
+        "spells_levels": [4, 3, 3, 2, 0, 0, 0, 0, 0]
+      },
+      {
+        "number": 17,
+        "prof_bonus": 6,
+        "spells_levels": [4, 3, 3, 3, 1, 0, 0, 0, 0]
+      },
+      {
+        "number": 18,
+        "prof_bonus": 6,
+        "spells_levels": [4, 3, 3, 3, 1, 0, 0, 0, 0]
+      },
+      {
+        "number": 19,
+        "prof_bonus": 6,
+        "spells_levels": [4, 3, 3, 3, 2, 0, 0, 0, 0]
+      },
+      {
+        "number": 20,
+        "prof_bonus": 6,
+        "spells_levels": [4, 3, 3, 3, 2, 0, 0, 0, 0]
+      }
+    ]
+  },
+  {
+    "name": "Sorcerer",
+    "hit_die": 6,
+    "spell_resource": "Sorcery Points",
+    "skills_count_choose": 2,
+    "skills": ["Arcana", "Deception", "Insight", "Intimidation", "Persuasion", "Religion"],
+    "saving_throws": ["CON", "CHA"],
+    "level_for_subclass": 3,
+    "levels_for_asi_bonuses": [4,8,12,16,19],
+    "class_features": [
+      {
+        "name": "Font of Magic",
+        "desc": "At 2nd level, you tap into a deep wellspring of magic within yourself. This wellspring is represented by sorcery points, which allow you to create a variety of magical effects.",
+        "level": 2
+      },
+      {
+        "name": "Metamagic",
+        "desc": "At 3rd level, you gain the ability to twist your spells to suit your needs. You gain two of the following Metamagic options of your choice. You gain another one at 10th and 17th level. You can use only one Metamagic option on a spell when you cast it, unless otherwise noted.",
+        "level": 3
+      }
+    ],
+    "levels": [
+      {
+        "number": 1,
+        "prof_bonus": 2,
+        "spells_levels": [2, 0, 0, 0, 0, 0, 0, 0, 0]
+      },
+      {
+        "number": 2,
+        "prof_bonus": 2,
+        "spells_levels": [2, 0, 0, 0, 0, 0, 0, 0, 0]
+      },
+      {
+        "number": 3,
+        "prof_bonus": 2,
+        "spells_levels": [3, 0, 0, 0, 0, 0, 0, 0, 0]
+      },
+      {
+        "number": 4,
+        "prof_bonus": 2,
+        "spells_levels": [3, 0, 0, 0, 0, 0, 0, 0, 0]
+      },
+      {
+        "number": 5,
+        "prof_bonus": 3,
+        "spells_levels": [4, 2, 0, 0, 0, 0, 0, 0, 0]
+      },
+      {
+        "number": 6,
+        "prof_bonus": 3,
+        "spells_levels": [4, 2, 0, 0, 0, 0, 0, 0, 0]
+      },
+      {
+        "number": 7,
+        "prof_bonus": 3,
+        "spells_levels": [4, 3, 0, 0, 0, 0, 0, 0, 0]
+      },
+      {
+        "number": 8,
+        "prof_bonus": 3,
+        "spells_levels": [4, 3, 0, 0, 0, 0, 0, 0, 0]
+      },
+      {
+        "number": 9,
+        "prof_bonus": 4,
+        "spells_levels": [4, 3, 2, 0, 0, 0, 0, 0, 0]
+      },
+      {
+        "number": 10,
+        "prof_bonus": 4,
+        "spells_levels": [4, 3, 2, 0, 0, 0, 0, 0, 0]
+      },
+      {
+        "number": 11,
+        "prof_bonus": 4,
+        "spells_levels": [4, 3, 3, 0, 0, 0, 0, 0, 0]
+      },
+      {
+        "number": 12,
+        "prof_bonus": 4,
+        "spells_levels": [4, 3, 3, 0, 0, 0, 0, 0, 0]
+      },
+      {
+        "number": 13,
+        "prof_bonus": 4,
+        "spells_levels": [4, 3, 3, 1, 0, 0, 0, 0, 0]
+      },
+      {
+        "number": 14,
+        "prof_bonus": 5,
+        "spells_levels": [4, 3, 3, 1, 0, 0, 0, 0, 0]
+      },
+      {
+        "number": 15,
+        "prof_bonus": 5,
+        "spells_levels": [4, 3, 3, 2, 0, 0, 0, 0, 0]
+      },
+      {
+        "number": 16,
+        "prof_bonus": 5,
+        "spells_levels": [4, 3, 3, 2, 0, 0, 0, 0, 0]
+      },
+      {
+        "number": 17,
+        "prof_bonus": 6,
+        "spells_levels": [4, 3, 3, 3, 1, 0, 0, 0, 0]
+      },
+      {
+        "number": 18,
+        "prof_bonus": 6,
+        "spells_levels": [4, 3, 3, 3, 1, 0, 0, 0, 0]
+      },
+      {
+        "number": 19,
+        "prof_bonus": 6,
+        "spells_levels": [4, 3, 3, 3, 2, 0, 0, 0, 0]
+      },
+      {
+        "number": 20,
+        "prof_bonus": 6,
+        "spells_levels": [4, 3, 3, 3, 2, 0, 0, 0, 0]
+      }
+    ]
+  }
+]
