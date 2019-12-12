@@ -4,7 +4,7 @@
 
 ### Design System 
 
-We are using the [VTEX Design system](https://styleguide.vtex.com/)
+We are using the [Bold Design system](https://bold.bridge.ufsc.br/)
 
 ### Routing
 
