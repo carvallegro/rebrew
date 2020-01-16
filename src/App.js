@@ -1,16 +1,12 @@
 import React from 'react'
+import { Router } from '@reach/router'
 
-import './App.css'
+import { Home } from './pages/Home'
 
-function App() {
-  return (
-    <div className="App bg-light-silver">
-      <header className="App-header">
-        <h1>H1 - Rebrew</h1>
-        <h2>More to come</h2>
-      </header>
-    </div>
-  )
-}
+const App = () => (
+  <Router>
+    <Home path="/" />
+  </Router>
+)
 
 export default App
