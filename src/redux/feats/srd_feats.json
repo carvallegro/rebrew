@@ -1,0 +1,9 @@
+[
+  {
+    "name": "Grappler",
+    "srd": true,
+    "desc": "Hold your own in close-quarters grappling",
+    "skills_count_choose": 0,
+    "skills": []
+  }
+]
