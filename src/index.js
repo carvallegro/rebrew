@@ -1,15 +1,19 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import { Provider } from 'react-redux'
 import { ThemeProvider } from 'bold-ui'
 
 import './index.css'
+import { store } from './redux'
 import App from './App'
 import * as serviceWorker from './serviceWorker'
 
 ReactDOM.render(
-  <ThemeProvider>
-    <App />
-  </ThemeProvider>,
+  <Provider store={store}>
+    <ThemeProvider>
+      <App />
+    </ThemeProvider>
+  </Provider>,
   document.getElementById('root')
 )
 
