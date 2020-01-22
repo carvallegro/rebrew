@@ -36,13 +36,7 @@ const Header = () => {
       <Logo title="Rebrew logo" />
 
       <Tooltip text="Upload content" placement="bottom-end">
-        <Button
-          innerRef={navigationRef}
-          onClick={handleClick}
-          skin="ghost"
-          size="small"
-          disabled
-        >
+        <Button onClick={handleClick} skin="ghost" size="small" disabled>
           <Icon icon="upload" />
         </Button>
       </Tooltip>

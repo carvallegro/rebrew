@@ -1,5 +1,146 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Storyshots Application Layout Default Render 1`] = `
+<div
+  className="css-1s71d7b"
+>
+  <div
+    className="css-cfo52d"
+  >
+    <header
+      className="css-1hfnl0x"
+    >
+      <button
+        className="css-5sb8u8"
+        onClick={[Function]}
+        type="button"
+      >
+        <span>
+          <svg
+            aria-hidden="true"
+            className="css-n86my2"
+            height="1em"
+            role="img"
+            viewBox="0 0 24 24"
+            width="1em"
+          >
+            <defs>
+              <path
+                d="M1 10h14c.667 0 1 .332 1 1 0 .62-.287.952-.862.995L15 12H1c-.667 0-1-.333-1-1 0-.619.287-.95.862-.995L1 10h14zm14-5c.667 0 1 .333 1 1s-.333 1-1 1H1c-.667 0-1-.334-1-1.002C0 5.329.333 4.997 1 5zM1 0h14c.667 0 1 .333 1 1 0 .619-.287.95-.862.995L15 2H1c-.667 0-1-.333-1-1C0 .381.287.05.862.005L1 0h14z"
+                id="hamburguer-menu_svg__a"
+              />
+            </defs>
+            <use
+              transform="translate(4 6)"
+              xlinkHref="#hamburguer-menu_svg__a"
+            />
+          </svg>
+        </span>
+      </button>
+      <svg
+        className="css-1vkplq"
+        title="Rebrew logo"
+      >
+        logo.svg
+      </svg>
+      <button
+        className="css-1y4or5a"
+        disabled={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onMouseEnter={[Function]}
+        title="Upload content"
+        type="button"
+      >
+        <span>
+          <svg
+            aria-hidden="true"
+            className="css-n86my2"
+            height="1em"
+            role="img"
+            viewBox="0 0 24 24"
+            width="1em"
+          >
+            <path
+              d="M19 18c.667-.004 1 .33 1 1.001 0 .672-.333 1.005-1 .999H5.002c-.67 0-1.004-.334-1.002-1 .002-.667.335-1 1-1zM12.707 4.293l5.001 5.001a1 1 0 01-1.414 1.414L13 7.414V15c0 .667-.333 1-1 1s-1-.333-1-1V7.414l-3.293 3.293a1 1 0 11-1.414-1.414l5-5a1 1 0 011.414 0z"
+            />
+          </svg>
+        </span>
+      </button>
+    </header>
+    <main
+      className="css-ycgarc"
+    />
+  </div>
+</div>
+`;
+
+exports[`Storyshots Header Default Render 1`] = `
+<header
+  className="css-1hfnl0x"
+>
+  <button
+    className="css-5sb8u8"
+    onClick={[Function]}
+    type="button"
+  >
+    <span>
+      <svg
+        aria-hidden="true"
+        className="css-n86my2"
+        height="1em"
+        role="img"
+        viewBox="0 0 24 24"
+        width="1em"
+      >
+        <defs>
+          <path
+            d="M1 10h14c.667 0 1 .332 1 1 0 .62-.287.952-.862.995L15 12H1c-.667 0-1-.333-1-1 0-.619.287-.95.862-.995L1 10h14zm14-5c.667 0 1 .333 1 1s-.333 1-1 1H1c-.667 0-1-.334-1-1.002C0 5.329.333 4.997 1 5zM1 0h14c.667 0 1 .333 1 1 0 .619-.287.95-.862.995L15 2H1c-.667 0-1-.333-1-1C0 .381.287.05.862.005L1 0h14z"
+            id="hamburguer-menu_svg__a"
+          />
+        </defs>
+        <use
+          transform="translate(4 6)"
+          xlinkHref="#hamburguer-menu_svg__a"
+        />
+      </svg>
+    </span>
+  </button>
+  <svg
+    className="css-1vkplq"
+    title="Rebrew logo"
+  >
+    logo.svg
+  </svg>
+  <button
+    className="css-1y4or5a"
+    disabled={true}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onMouseEnter={[Function]}
+    title="Upload content"
+    type="button"
+  >
+    <span>
+      <svg
+        aria-hidden="true"
+        className="css-n86my2"
+        height="1em"
+        role="img"
+        viewBox="0 0 24 24"
+        width="1em"
+      >
+        <path
+          d="M19 18c.667-.004 1 .33 1 1.001 0 .672-.333 1.005-1 .999H5.002c-.67 0-1.004-.334-1.002-1 .002-.667.335-1 1-1zM12.707 4.293l5.001 5.001a1 1 0 01-1.414 1.414L13 7.414V15c0 .667-.333 1-1 1s-1-.333-1-1V7.414l-3.293 3.293a1 1 0 11-1.414-1.414l5-5a1 1 0 011.414 0z"
+        />
+      </svg>
+    </span>
+  </button>
+</header>
+`;
+
 exports[`Storyshots TestComponent Text 1`] = `
 <p>
   Hello world
