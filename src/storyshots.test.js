@@ -1,7 +1,6 @@
 import initStoryshots, {
   snapshotWithOptions
 } from '@storybook/addon-storyshots'
-import { Dropdown } from 'bold-ui'
 
 initStoryshots({
   test: snapshotWithOptions(story => ({
