@@ -4,6 +4,6 @@ import App from './App'
 
 test('renders learn react link', () => {
   const { getByText } = render(<App />)
-  const linkElement = getByText(/rebrew/i)
+  const linkElement = getByText(/REBREW/)
   expect(linkElement).toBeInTheDocument()
 })
