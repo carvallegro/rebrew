@@ -38,8 +38,9 @@ exports[`Storyshots Application Layout Default Render 1`] = `
         </span>
       </button>
       <svg
-        className="css-1vkplq"
-        title="Rebrew logo"
+        className="css-y9zn78"
+        height="42px"
+        width="45px"
       >
         logo.svg
       </svg>
@@ -108,8 +109,9 @@ exports[`Storyshots Header Default Render 1`] = `
     </span>
   </button>
   <svg
-    className="css-1vkplq"
-    title="Rebrew logo"
+    className="css-y9zn78"
+    height="42px"
+    width="45px"
   >
     logo.svg
   </svg>
@@ -139,6 +141,54 @@ exports[`Storyshots Header Default Render 1`] = `
     </span>
   </button>
 </header>
+`;
+
+exports[`Storyshots HomepageLink Default Render 1`] = `
+<div
+  className="css-kq56f1"
+  elevation={0}
+  onClick={[Function]}
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+>
+  <p
+    className="css-1pha4dg"
+  >
+    Link Text
+  </p>
+  <svg
+    aria-hidden="true"
+    className="css-n86my2"
+    height="1em"
+    role="img"
+    viewBox="0 0 24 24"
+    width="1em"
+  >
+    <path
+      d="M19.707 12.707l-5.001 5.001a1 1 0 11-1.414-1.414L16.586 13H5c-.667 0-1-.332-1-1 0-.668.333-1 1-1h11.586l-3.293-3.293a1 1 0 111.414-1.414l5 5a1 1 0 010 1.414z"
+    />
+  </svg>
+</div>
+`;
+
+exports[`Storyshots Logo Custom Size Render 1`] = `
+<svg
+  className="css-1a4qcxd"
+  height="100px"
+  width="100px"
+>
+  logo.svg
+</svg>
+`;
+
+exports[`Storyshots Logo Default Render 1`] = `
+<svg
+  className="css-y9zn78"
+  height="42px"
+  width="45px"
+>
+  logo.svg
+</svg>
 `;
 
 exports[`Storyshots TestComponent Text 1`] = `
