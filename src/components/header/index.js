@@ -1,7 +1,9 @@
 import React, { useRef, useState } from 'react'
 import { Button, Dropdown, DropdownItem, Icon, Tooltip } from 'bold-ui'
 
-import { HeaderWrapper, Logo } from './styles'
+import Logo from '../logo'
+
+import { HeaderWrapper } from './styles'
 
 const Header = () => {
   const navigationRef = useRef()
