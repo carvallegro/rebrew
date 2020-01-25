@@ -1,19 +1,42 @@
 import React from 'react'
-import styled from '@emotion/styled'
+import { Cell, Grid, Heading, Text } from 'bold-ui'
 
-const Header = styled.div`
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-`
+import Logo from '../../components/logo'
+import HomepageLink from '../../components/HomepageLink'
 
-export const Home = () => (
-  <Header>
-    <header className="App-header">
-      <h1>H1 - Rebrew</h1>
-      <h2>More to come</h2>
-    </header>
-  </Header>
+import { Wrapper } from './styles'
+
+const Home = () => (
+  <Wrapper>
+    <Logo height="80px" width="80px" />
+    <Heading level={1} fontSize={2}>
+      REBREW
+    </Heading>
+    <Text component="p" fontSize={1}>
+      Welcome to Rebrew, an easy to use interface to generate homebrew content
+      for Reroll.
+    </Text>
+    <Grid gap={2} gapVertical={1}>
+      <Cell md={4} sm={6} xs={12}>
+        <HomepageLink text="Classes" to="classes" />
+      </Cell>
+      <Cell md={4} sm={6} xs={12}>
+        <HomepageLink text="Subclasses" to="subclasses" />
+      </Cell>
+      <Cell md={4} sm={6} xs={12}>
+        <HomepageLink text="Races" to="races" />
+      </Cell>
+      <Cell md={4} sm={6} xs={12}>
+        <HomepageLink text="Backgrounds" to="backgrounds" />
+      </Cell>
+      <Cell md={4} sm={6} xs={12}>
+        <HomepageLink text="Feats" to="feats" />
+      </Cell>
+      <Cell md={4} sm={6} xs={12}>
+        <HomepageLink text="Spells" to="spells" />
+      </Cell>
+    </Grid>
+  </Wrapper>
 )
+
+export default Home
