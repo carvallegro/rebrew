@@ -1,6 +1,7 @@
 [
   {
     "name": "Bless",
+    "type": "spell",
     "level_number": 1,
     "school": "Enchantment",
     "casting_time": "1 action",

@@ -15,7 +15,6 @@ import {
 import connect from './connect'
 import SpellCard from '../../components/spell-card'
 import { getSpellLevelDisplayText } from '../../utils'
-import { inc } from 'ramda'
 
 const SpellListPage = ({ spells = [] }) => {
   const [spellGroups, setSpellGroups] = useState({})
@@ -37,14 +36,14 @@ const SpellListPage = ({ spells = [] }) => {
     )(spells)
 
     setSpellGroups(searchResult)
-  }, [searchValue, includeSrd])
+  }, [searchValue, includeSrd, spells])
 
   return (
     <VFlow>
       {spellListHeader(searchValue, updateSearch, includeSrd, setIncludeSrd)}
 
       <Grid gap={2} gapVertical={1} wrap>
-        {Object.keys(spellGroups).length == 0 && (
+        {Object.keys(spellGroups).length === 0 && (
           <Cell xs={12}>
             <Heading level={3}>
               <i>No result</i>
