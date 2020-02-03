@@ -4,10 +4,10 @@ import { Button, HFlow, Icon, Paper, Tag, Text, VFlow } from 'bold-ui'
 
 import { getSpellLevelDisplayText } from '../../utils'
 
-import { CardContent } from './styles'
+import { CardContent, Description } from './styles'
 
 const paperStyle = {
-  padding: '16px'
+  padding: '.5rem 1rem'
 }
 
 const SpellCard = ({
@@ -66,11 +66,13 @@ const SpellCard = ({
               <b>Duration:</b> {duration}
             </Text>
           </div>
-          {desc.split('\n').map((text, i) => (
-            <Text key={i} component="p" fontSize={1}>
-              {text}
-            </Text>
-          ))}
+          <Description>
+            {desc.split('\n').map((text, i) => (
+              <Text key={i} component="p" fontSize={1}>
+                {text}
+              </Text>
+            ))}
+          </Description>
         </VFlow>
       </CardContent>
     </Paper>

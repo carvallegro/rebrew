@@ -1,16 +1,13 @@
 import * as R from 'ramda'
-import React, { Fragment, useState } from 'react'
+import React, { Fragment, useEffect, useState } from 'react'
 import PropTypes from 'prop-types'
 import {
   Button,
   Cell,
   Checkbox,
-  FormControl,
   Grid,
   Heading,
-  HFlow,
   Icon,
-  Select,
   TextField,
   VFlow
 } from 'bold-ui'
@@ -18,9 +15,68 @@ import {
 import connect from './connect'
 import SpellCard from '../../components/spell-card'
 import { getSpellLevelDisplayText } from '../../utils'
+import { inc } from 'ramda'
+
+const SpellListPage = ({ spells = [] }) => {
+  const [spellGroups, setSpellGroups] = useState({})
+  const [searchValue, updateSearch] = useState('')
+  const [includeSrd, setIncludeSrd] = useState(true)
+
+  useEffect(() => {
+    if (searchValue.length && searchValue.length < 3) {
+      return
+    }
+
+    const searchResult = R.pipe(
+      R.filter(R.propEq('srd', includeSrd)),
+      R.filter(spell =>
+        R.includes(searchValue.trim().toLowerCase())(spell.name.toLowerCase())
+      ),
+      R.sortBy(R.prop('name')),
+      R.groupBy(R.prop('level_number'))
+    )(spells)
+
+    setSpellGroups(searchResult)
+  }, [searchValue, includeSrd])
+
+  return (
+    <VFlow>
+      {spellListHeader(searchValue, updateSearch, includeSrd, setIncludeSrd)}
+
+      <Grid gap={2} gapVertical={1} wrap>
+        {Object.keys(spellGroups).length == 0 && (
+          <Cell xs={12}>
+            <Heading level={3}>
+              <i>No result</i>
+            </Heading>
+          </Cell>
+        )}
+        {Object.values(
+          R.mapObjIndexed(
+            (spell, key) => (
+              <Fragment key={key}>
+                <Cell xs={12}>
+                  <Heading level={2}>{getSpellLevelDisplayText(key)}</Heading>
+                </Cell>
+                {spell.map(displaySpell)}
+              </Fragment>
+            ),
+            spellGroups
+          )
+        )}
+      </Grid>
+    </VFlow>
+  )
+}
+
+SpellListPage.propTypes = {
+  spells: PropTypes.array.isRequired
+}
+
+export default connect(SpellListPage)
 
 const displaySpell = (spell, index) => (
-  <Cell key={index} md={3} sm={6} xs={12}>
+  <Cell key={index} lg={3} md={4} sm={6} xs={12}>
     <SpellCard
       spellName={spell.name}
       srd={spell.srd}
@@ -35,63 +91,38 @@ const displaySpell = (spell, index) => (
   </Cell>
 )
 
-const SpellListPage = ({ spells = [] }) => {
-  const [searchValue, updateSearch] = useState('')
-  const [includeSrd, setIncludeSrd] = useState(true)
+const spellListHeader = (
+  searchValue,
+  updateSearch,
+  includeSrd,
+  setIncludeSrd
+) => (
+  <Grid gap={0.5} alignItems="center">
+    <Cell lg={3} md={3} sm={4} xs={12}>
+      <TextField
+        icon="zoomOutline"
+        iconPosition="left"
+        name="search-spell-by-name"
+        placeholder="Type spell name"
+        value={searchValue}
+        onChange={e => updateSearch(e.target.value)}
+      />
+    </Cell>
 
-  const filteredSpells = R.pipe(
-    R.filter(R.propEq('srd', includeSrd)),
-    R.filter(R.propSatisfies(R.includes(searchValue.trim()), 'name')),
-    R.sortBy(R.prop('name')),
-    R.groupBy(R.prop('level_number'))
-  )(spells)
+    <Cell lg={2} md={3} sm={4} xs={12}>
+      <Checkbox
+        label="Include SRD content"
+        name="include-srd"
+        checked={includeSrd}
+        onChange={() => setIncludeSrd(!includeSrd)}
+      />
+    </Cell>
 
-  return (
-    <VFlow>
-      <HFlow hSpacing={0.5} alignItems="center">
-        <TextField
-          icon="zoomOutline"
-          iconPosition="left"
-          name="search-spell-by-name"
-          placeholder="Type spell name"
-          value={searchValue}
-          onChange={e => updateSearch(e.target.value)}
-        />
-
-        <Checkbox
-          label="Include SRD content"
-          name="include-srd"
-          checked={includeSrd}
-          onChange={() => setIncludeSrd(!includeSrd)}
-        />
-
-        <Button kind="primary" skin="default" size="medium" disabled>
-          <Icon icon="plus" style={{ marginRight: '0.5rem' }} />
-          Add
-        </Button>
-      </HFlow>
-
-      <Grid gap={2} gapVertical={1} wrap>
-        {Object.values(
-          R.mapObjIndexed(
-            (spell, key) => (
-              <Fragment key={key}>
-                <Cell xs={12}>
-                  <Heading level={2}>{getSpellLevelDisplayText(key)}</Heading>
-                </Cell>
-                {spell.map(displaySpell)}
-              </Fragment>
-            ),
-            filteredSpells
-          )
-        )}
-      </Grid>
-    </VFlow>
-  )
-}
-
-SpellListPage.propTypes = {
-  spells: PropTypes.array.isRequired
-}
-
-export default connect(SpellListPage)
+    <Cell lg={1} md={1} sm={1} xs={12}>
+      <Button kind="primary" skin="default" size="medium" disabled>
+        <Icon icon="plus" style={{ marginRight: '0.5rem' }} />
+        Add
+      </Button>
+    </Cell>
+  </Grid>
+)
