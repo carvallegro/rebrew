@@ -191,6 +191,117 @@ exports[`Storyshots Logo Default Render 1`] = `
 </svg>
 `;
 
+exports[`Storyshots Spell card Default Render 1`] = `
+<div
+  className="css-1ckdz6j"
+>
+  <div
+    className="css-1gl7d4a"
+  >
+    <button
+      className="css-5sb8u8"
+      onClick={[Function]}
+      type="button"
+    >
+      <span>
+        <svg
+          aria-hidden="true"
+          className="css-n86my2"
+          height="1em"
+          role="img"
+          viewBox="0 0 24 24"
+          width="1em"
+        >
+          <path
+            d="M16.294 8.294a1 1 0 111.414 1.414l-5 5a1 1 0 01-1.414 0l-5.001-5a1 1 0 011.414-1.415l4.294 4.294 4.293-4.293z"
+          />
+        </svg>
+      </span>
+    </button>
+    <span
+      className="css-kjh4ly"
+    >
+      Alter Self
+    </span>
+  </div>
+  <div
+    className="css-15r1rym"
+    hidden={true}
+  >
+    <div
+      className="css-j7qwjs"
+    >
+      <div
+        className="css-wstido"
+      >
+        <p
+          className="css-lc0qpe"
+        >
+          2nd level
+           
+          Enchantment
+        </p>
+      </div>
+      <div
+        className="css-wstido"
+      >
+        <div>
+          <p
+            className="css-1ocwri7"
+          >
+            <b>
+              Casting time:
+            </b>
+             
+            1 action
+          </p>
+          <p
+            className="css-1ocwri7"
+          >
+            <b>
+              Range:
+            </b>
+             
+            Self
+          </p>
+          <p
+            className="css-1ocwri7"
+          >
+            <b>
+              Components:
+            </b>
+             
+            V, S
+          </p>
+          <p
+            className="css-1ocwri7"
+          >
+            <b>
+              Duration:
+            </b>
+             
+            Concentration, up to 1 hour
+          </p>
+        </div>
+      </div>
+      <div
+        className="css-wstido"
+      >
+        <div
+          className="css-16ewyma"
+        >
+          <p
+            className="css-1ocwri7"
+          >
+            You assume a different form. When you cast the spell, choose one of the following options, the effects of which last for the duration of the spell. While the spell lasts, you can end one option as an action to gain the benefits of a different one.\\nAquatic Adaptation: You adapt your body to
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots TestComponent Text 1`] = `
 <p>
   Hello world
