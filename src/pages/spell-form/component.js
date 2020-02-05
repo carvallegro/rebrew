@@ -26,9 +26,22 @@ import {
   SpellDescription
 } from '../../components/spell-fields'
 
+const FORM_INITIAL_VALUES = {
+  name: '',
+  srd: false,
+  level_number: '',
+  school: '',
+  casting_time: '',
+  range: '',
+  duration: '',
+  components: '',
+  desc: ''
+}
+
 const eqInsensitive = R.curry(
   (a, b) => String(a).toLowerCase() === String(b).toLowerCase()
 )
+
 const generateSpellSchema = spellNames =>
   Yup.object().shape({
     name: Yup.string()
@@ -75,17 +88,7 @@ export const SpellForm = ({ allSpellNames = [], createSpell }) => {
     touched,
     setFieldTouched
   } = useFormik({
-    initialValues: {
-      name: '',
-      srd: false,
-      level_number: '',
-      school: '',
-      casting_time: '',
-      range: '',
-      duration: '',
-      components: '',
-      desc: ''
-    },
+    initialValues: FORM_INITIAL_VALUES,
     validationSchema: generateSpellSchema(allSpellNames),
     onSubmit: values => {
       createSpell(values)
