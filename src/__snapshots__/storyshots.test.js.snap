@@ -197,7 +197,7 @@ exports[`Storyshots Spell Fields/CastingTime Default Render 1`] = `
 >
   <label
     className="css-1tdx2hb"
-    id="label-2tlxbfl31d"
+    id="label-1p7xozpa68mj"
   >
     Casting time
     <span
@@ -211,7 +211,7 @@ exports[`Storyshots Spell Fields/CastingTime Default Render 1`] = `
     className="css-o1mvac"
   >
     <input
-      aria-labelledby="label-2tlxbfl31d"
+      aria-labelledby="label-1p7xozpa68mj"
       className="css-15ndqf0"
       name="casting_time"
       placeholder="Reaction, 1 action..."
@@ -282,7 +282,7 @@ exports[`Storyshots Spell Fields/Description Default Render 1`] = `
 >
   <label
     className="css-1tdx2hb"
-    id="label-irsppzwgao"
+    id="label-4jz5w7lfxbi"
   >
     Description
     <span
@@ -293,7 +293,7 @@ exports[`Storyshots Spell Fields/Description Default Render 1`] = `
     </span>
   </label>
   <textarea
-    aria-labelledby="label-irsppzwgao"
+    aria-labelledby="label-4jz5w7lfxbi"
     className="css-15ndqf0"
     name="desc"
     placeholder="Enter the description"
@@ -308,7 +308,7 @@ exports[`Storyshots Spell Fields/Name Default Render 1`] = `
 >
   <label
     className="css-1tdx2hb"
-    id="label-3p9g6ozo9kd"
+    id="label-irejnsu296"
   >
     Name
     <span
@@ -322,7 +322,7 @@ exports[`Storyshots Spell Fields/Name Default Render 1`] = `
     className="css-o1mvac"
   >
     <input
-      aria-labelledby="label-3p9g6ozo9kd"
+      aria-labelledby="label-irejnsu296"
       className="css-15ndqf0"
       name="name"
       placeholder="Enter the spell name"
@@ -421,7 +421,7 @@ exports[`Storyshots Spell Fields/SpellDuration Default Render 1`] = `
 >
   <label
     className="css-1tdx2hb"
-    id="label-mg8xy5x2c3"
+    id="label-h7jrmsoydrj"
   >
     Duration
     <span
@@ -435,7 +435,7 @@ exports[`Storyshots Spell Fields/SpellDuration Default Render 1`] = `
     className="css-o1mvac"
   >
     <input
-      aria-labelledby="label-mg8xy5x2c3"
+      aria-labelledby="label-h7jrmsoydrj"
       className="css-15ndqf0"
       name="duration"
       placeholder="Instaneous, 1 minute, 1 hour..."
@@ -452,7 +452,7 @@ exports[`Storyshots Spell Fields/SpellRange Default Render 1`] = `
 >
   <label
     className="css-1tdx2hb"
-    id="label-y97eu0hhb2r"
+    id="label-yzbtvqdt7fa"
   >
     Range
     <span
@@ -466,7 +466,7 @@ exports[`Storyshots Spell Fields/SpellRange Default Render 1`] = `
     className="css-o1mvac"
   >
     <input
-      aria-labelledby="label-y97eu0hhb2r"
+      aria-labelledby="label-yzbtvqdt7fa"
       className="css-15ndqf0"
       name="range"
       placeholder="Self, 30 feet, 120 feet..."
