@@ -52,17 +52,17 @@ export const spellSchools = [
   'Transmutation'
 ]
 
-export const spellComponents = [
-  {
+export const spellComponents = {
+  V: {
     value: 'V',
     label: 'Verbal (V)'
   },
-  {
+  M: {
     value: 'M',
     label: 'Material (M)'
   },
-  {
+  S: {
     value: 'S',
     label: 'Somatic (S)'
   }
-]
+}
