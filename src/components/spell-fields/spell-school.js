@@ -4,7 +4,6 @@ import * as PropTypes from 'prop-types'
 import { FormControl, Select } from 'bold-ui'
 
 import { spellSchools } from '../../spell-utils'
-import SpellComponents from './spell-components'
 
 export const SpellSchool = ({ value, ...props }) => {
   return (

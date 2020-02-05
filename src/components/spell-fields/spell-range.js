@@ -1,6 +1,5 @@
-import { TextField } from 'bold-ui'
 import React from 'react'
-import SpellComponents from './spell-components'
+import { TextField } from 'bold-ui'
 
 export const SpellRange = ({ value, ...props }) => (
   <TextField

@@ -1,8 +1,8 @@
-import { FormControl, Select } from 'bold-ui'
-import { spellComponents } from '../../spell-utils'
 import * as R from 'ramda'
 import React from 'react'
-import SpellCastingTime from './spell-casting-time'
+import { FormControl, Select } from 'bold-ui'
+
+import { spellComponents } from '../../spell-utils'
 
 export const SpellComponents = ({ value = '', onChange, ...props }) => (
   <FormControl label="Components" required htmlFor="spellComponents">

@@ -1,6 +1,5 @@
 import React from 'react'
 import { TextField } from 'bold-ui'
-import SpellComponents from './spell-components'
 
 export const SpellDuration = ({ value, ...props }) => (
   <TextField

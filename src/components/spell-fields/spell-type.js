@@ -1,8 +1,8 @@
-import { FormControl, Select } from 'bold-ui'
-import { spellLevels } from '../../spell-utils'
 import * as R from 'ramda'
 import React from 'react'
-import SpellComponents from './spell-components'
+import { FormControl, Select } from 'bold-ui'
+
+import { spellLevels } from '../../spell-utils'
 
 export const SpellType = ({ value, ...props }) => (
   <FormControl label="Type" htmlFor="level_number" required>
