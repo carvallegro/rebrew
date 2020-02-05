@@ -1,5 +1,5 @@
 import * as R from 'ramda'
-import React from 'react'
+import React, { Fragment } from 'react'
 import { navigate } from '@reach/router'
 import { useFormik } from 'formik'
 import * as Yup from 'yup'
@@ -78,6 +78,39 @@ const generateSpellSchema = spellNames =>
       .required('You must enter a description')
   })
 
+const SpellIntroduction = () => (
+  <Fragment>
+    <Text component="p" fontSize={1}>
+      A spell is a discrete magical effect, a single shaping of the magical
+      energies that suffuse the multiverse into a specific, limited expression.
+      In casting a spell, a character carefully plucks at the invisible strands
+      of raw magic suffusing the world, pins them in place in a particular
+      pattern, sets them vibrating in a specific way, and then releases them to
+      unleash the desired effect—in most cases, all in the span of seconds.
+    </Text>
+    <Text component="p" fontSize={1}>
+      Spells can be versatile tools, weapons, or protective wards. They can deal
+      damage or undo it, impose or remove conditions, drain life energy away,
+      and restore life to the dead.
+    </Text>
+  </Fragment>
+)
+
+const SpellFormBreadCrumb = () => (
+  <Breadcrumbs>
+    <Link
+      color="inherit"
+      textDecoration="none"
+      onClick={() => navigate('../spells')}
+    >
+      Spells
+    </Link>
+    <Link color="inherit" textDecoration="none">
+      Create
+    </Link>
+  </Breadcrumbs>
+)
+
 export const SpellForm = ({ allSpellNames = [], createSpell }) => {
   const {
     handleSubmit,
@@ -98,33 +131,9 @@ export const SpellForm = ({ allSpellNames = [], createSpell }) => {
 
   return (
     <VFlow vSpacing={1.5} style={{ maxWidth: '800px' }}>
-      <Breadcrumbs>
-        <Link
-          color="inherit"
-          textDecoration="none"
-          onClick={() => navigate('../spells')}
-        >
-          Spells
-        </Link>
-        <Link color="inherit" textDecoration="none">
-          Create
-        </Link>
-      </Breadcrumbs>
+      <SpellFormBreadCrumb />
 
-      <Text component="p" fontSize={1}>
-        A spell is a discrete magical effect, a single shaping of the magical
-        energies that suffuse the multiverse into a specific, limited
-        expression. In casting a spell, a character carefully plucks at the
-        invisible strands of raw magic suffusing the world, pins them in place
-        in a particular pattern, sets them vibrating in a specific way, and then
-        releases them to unleash the desired effect—in most cases, all in the
-        span of seconds.
-      </Text>
-      <Text component="p" fontSize={1}>
-        Spells can be versatile tools, weapons, or protective wards. They can
-        deal damage or undo it, impose or remove conditions, drain life energy
-        away, and restore life to the dead.
-      </Text>
+      <SpellIntroduction />
 
       <Grid gap={2} gapVertical={1}>
         <Cell sm={8} xs={12}>
