@@ -26,22 +26,46 @@ import {
   SpellDescription
 } from '../../components/spell-fields'
 
-const spellSchema = Yup.object().shape({
-  name: Yup.string().required('You must enter a name'),
-  level_number: Yup.string()
-    .nullable()
-    .required('You must select a spell type'),
-  school: Yup.string()
-    .nullable()
-    .required('You must select a school of magic'),
-  casting_time: Yup.string().required('You must enter a casting time'),
-  range: Yup.string().required('You must enter a range'),
-  duration: Yup.string().required('You must enter a duration'),
-  components: Yup.string().required('You must select at least one component'),
-  desc: Yup.string().required('You must enter a description')
-})
+const eqInsensitive = R.curry(
+  (a, b) => String(a).toLowerCase() === String(b).toLowerCase()
+)
+const generateSpellSchema = spellNames =>
+  Yup.object().shape({
+    name: Yup.string()
+      .trim()
+      .nullable()
+      .test(
+        'notAnExistingSpellNameTest',
+        'There is already a spell with that name',
+        value => !R.find(eqInsensitive(value), spellNames)
+      )
+      .required('You must enter a name'),
+    level_number: Yup.string()
+      .nullable()
+      .trim()
+      .required('You must select a spell type'),
+    school: Yup.string()
+      .nullable()
+      .trim()
+      .required('You must select a school of magic'),
+    casting_time: Yup.string()
+      .trim()
+      .required('You must enter a casting time'),
+    range: Yup.string()
+      .trim()
+      .required('You must enter a range'),
+    duration: Yup.string()
+      .trim()
+      .required('You must enter a duration'),
+    components: Yup.string()
+      .trim()
+      .required('You must select at least one component'),
+    desc: Yup.string()
+      .trim()
+      .required('You must enter a description')
+  })
 
-export const SpellForm = ({ createSpell }) => {
+export const SpellForm = ({ allSpellNames = [], createSpell }) => {
   const {
     handleSubmit,
     errors,
@@ -62,7 +86,7 @@ export const SpellForm = ({ createSpell }) => {
       components: '',
       desc: ''
     },
-    validationSchema: spellSchema,
+    validationSchema: generateSpellSchema(allSpellNames),
     onSubmit: values => {
       createSpell(values)
       return navigate('../spells')
