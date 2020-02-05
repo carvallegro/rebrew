@@ -1,3 +1,14 @@
 import * as R from 'ramda'
+import { createSelector } from '@reduxjs/toolkit'
 
-export const selectAllSpells = R.pathOr([], ['spells'])
+const selectAllSpellsIndexedByName = R.pathOr([], ['spells'])
+
+export const selectAllSpells = createSelector(
+  selectAllSpellsIndexedByName,
+  Object.values
+)
+
+export const selectAllSpellNames = createSelector(
+  selectAllSpellsIndexedByName,
+  Object.keys
+)

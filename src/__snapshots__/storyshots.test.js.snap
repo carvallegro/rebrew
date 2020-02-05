@@ -191,6 +191,374 @@ exports[`Storyshots Logo Default Render 1`] = `
 </svg>
 `;
 
+exports[`Storyshots Spell Fields/CastingTime Default Render 1`] = `
+<div
+  className="css-0"
+>
+  <label
+    className="css-1tdx2hb"
+    htmlFor="casting_time"
+  >
+    Casting time
+    <span
+      className="css-fpulsy"
+      title="Required field"
+    >
+      *
+    </span>
+  </label>
+  <div
+    className="css-o1mvac"
+  >
+    <input
+      className="css-15ndqf0"
+      id="casting_time"
+      name="casting_time"
+      placeholder="Reaction, 1 action..."
+      required={true}
+      type="text"
+    />
+  </div>
+</div>
+`;
+
+exports[`Storyshots Spell Fields/Components Default Render 1`] = `
+<div
+  className="css-0"
+>
+  <label
+    className="css-1tdx2hb"
+    htmlFor="spellComponents"
+  >
+    Components
+    <span
+      className="css-fpulsy"
+      title="Required field"
+    >
+      *
+    </span>
+  </label>
+  <div
+    className="css-0"
+  >
+    <div
+      aria-expanded={false}
+      aria-haspopup="listbox"
+      aria-labelledby="downshift-0-label"
+      aria-owns={null}
+      role="combobox"
+    >
+      <div
+        className="css-7bq0j0"
+        onClick={[Function]}
+      >
+        <input
+          aria-activedescendant={null}
+          aria-autocomplete="list"
+          aria-controls={null}
+          autoComplete="off"
+          className="css-1hneurt"
+          id="downshift-0-input"
+          name="components"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onClick={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          placeholder="Choose amongst V, M and S"
+          required={true}
+          type="text"
+          value=""
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Spell Fields/Description Default Render 1`] = `
+<div
+  className="css-0"
+>
+  <label
+    className="css-1tdx2hb"
+    htmlFor="desc"
+  >
+    Description
+    <span
+      className="css-fpulsy"
+      title="Required field"
+    >
+      *
+    </span>
+  </label>
+  <textarea
+    className="css-15ndqf0"
+    id="desc"
+    name="desc"
+    placeholder="Enter the description"
+    required={true}
+  />
+</div>
+`;
+
+exports[`Storyshots Spell Fields/Name Default Render 1`] = `
+<div
+  className="css-0"
+>
+  <label
+    className="css-1tdx2hb"
+    htmlFor="name"
+  >
+    Name
+    <span
+      className="css-fpulsy"
+      title="Required field"
+    >
+      *
+    </span>
+  </label>
+  <div
+    className="css-o1mvac"
+  >
+    <input
+      className="css-15ndqf0"
+      id="name"
+      name="name"
+      placeholder="Enter the spell name"
+      required={true}
+      type="text"
+    />
+  </div>
+</div>
+`;
+
+exports[`Storyshots Spell Fields/School Default Render 1`] = `
+<div
+  className="css-0"
+>
+  <label
+    className="css-1tdx2hb"
+    htmlFor="school"
+  >
+    School
+    <span
+      className="css-fpulsy"
+      title="Required field"
+    >
+      *
+    </span>
+  </label>
+  <div
+    className="css-0"
+  >
+    <div
+      aria-expanded={false}
+      aria-haspopup="listbox"
+      aria-labelledby="downshift-1-label"
+      aria-owns={null}
+      className="css-0"
+      role="combobox"
+    >
+      <div>
+        <div
+          className="css-1ky7qjs"
+        >
+          <input
+            aria-activedescendant={null}
+            aria-autocomplete="list"
+            aria-controls={null}
+            autoComplete="off"
+            className="css-15ndqf0"
+            id="downshift-1-input"
+            name="school"
+            onBlur={[Function]}
+            onChange={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            placeholder="Divination, Abjuration, Necromancy..."
+            required={true}
+            type="text"
+            value=""
+          />
+          <span
+            className="css-djhpe5"
+          >
+            <button
+              className="css-mwsknu"
+              disabled={false}
+              onClick={[Function]}
+              tabIndex={-1}
+              type="button"
+            >
+              <span>
+                <svg
+                  aria-hidden="true"
+                  className="css-n86my2"
+                  height="1em"
+                  role="img"
+                  viewBox="0 0 24 24"
+                  width="1em"
+                >
+                  <path
+                    d="M16.294 8.294a1 1 0 111.414 1.414l-5 5a1 1 0 01-1.414 0l-5.001-5a1 1 0 011.414-1.415l4.294 4.294 4.293-4.293z"
+                  />
+                </svg>
+              </span>
+            </button>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Spell Fields/SpellDuration Default Render 1`] = `
+<div
+  className="css-0"
+>
+  <label
+    className="css-1tdx2hb"
+    htmlFor="duration"
+  >
+    Duration
+    <span
+      className="css-fpulsy"
+      title="Required field"
+    >
+      *
+    </span>
+  </label>
+  <div
+    className="css-o1mvac"
+  >
+    <input
+      className="css-15ndqf0"
+      id="duration"
+      name="duration"
+      placeholder="Instaneous, 1 minute, 1 hour..."
+      required={true}
+      type="text"
+    />
+  </div>
+</div>
+`;
+
+exports[`Storyshots Spell Fields/SpellRange Default Render 1`] = `
+<div
+  className="css-0"
+>
+  <label
+    className="css-1tdx2hb"
+    htmlFor="range"
+  >
+    Range
+    <span
+      className="css-fpulsy"
+      title="Required field"
+    >
+      *
+    </span>
+  </label>
+  <div
+    className="css-o1mvac"
+  >
+    <input
+      className="css-15ndqf0"
+      id="range"
+      name="range"
+      placeholder="Self, 30 feet, 120 feet..."
+      required={true}
+      type="text"
+    />
+  </div>
+</div>
+`;
+
+exports[`Storyshots Spell Fields/Type Default Render 1`] = `
+<div
+  className="css-0"
+>
+  <label
+    className="css-1tdx2hb"
+    htmlFor="level_number"
+  >
+    Type
+    <span
+      className="css-fpulsy"
+      title="Required field"
+    >
+      *
+    </span>
+  </label>
+  <div
+    className="css-0"
+  >
+    <div
+      aria-expanded={false}
+      aria-haspopup="listbox"
+      aria-labelledby="downshift-2-label"
+      aria-owns={null}
+      className="css-0"
+      role="combobox"
+    >
+      <div>
+        <div
+          className="css-1ky7qjs"
+        >
+          <input
+            aria-activedescendant={null}
+            aria-autocomplete="list"
+            aria-controls={null}
+            autoComplete="off"
+            className="css-15ndqf0"
+            id="downshift-2-input"
+            name="level_number"
+            onBlur={[Function]}
+            onChange={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            placeholder="Cantrip, 1st level..."
+            required={true}
+            type="text"
+            value=""
+          />
+          <span
+            className="css-djhpe5"
+          >
+            <button
+              className="css-mwsknu"
+              disabled={false}
+              onClick={[Function]}
+              tabIndex={-1}
+              type="button"
+            >
+              <span>
+                <svg
+                  aria-hidden="true"
+                  className="css-n86my2"
+                  height="1em"
+                  role="img"
+                  viewBox="0 0 24 24"
+                  width="1em"
+                >
+                  <path
+                    d="M16.294 8.294a1 1 0 111.414 1.414l-5 5a1 1 0 01-1.414 0l-5.001-5a1 1 0 011.414-1.415l4.294 4.294 4.293-4.293z"
+                  />
+                </svg>
+              </span>
+            </button>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Spell card Default Render 1`] = `
 <div
   className="css-1ckdz6j"
