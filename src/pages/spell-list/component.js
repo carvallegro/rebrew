@@ -27,7 +27,7 @@ export const SpellListPage = ({ spells = [] }) => {
     }
 
     const searchResult = R.pipe(
-      R.filter(R.propEq('srd', includeSrd)),
+      R.reject(spell => spell.srd && !includeSrd),
       R.filter(spell =>
         R.includes(searchValue.trim().toLowerCase())(spell.name.toLowerCase())
       ),
