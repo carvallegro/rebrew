@@ -7,6 +7,7 @@ import { spellComponents } from '../../spell-utils'
 export const SpellComponents = ({ value = '', onChange, ...props }) => (
   <FormControl label="Components" required htmlFor="spellComponents">
     <Select
+      id="components"
       name="components"
       multiple
       required

@@ -3,8 +3,9 @@ import { TextField } from 'bold-ui'
 
 export const SpellCastingTime = ({ value, ...props }) => (
   <TextField
-    required
+    id="casting_time"
     name="casting_time"
+    required
     label="Casting time"
     placeholder="Reaction, 1 action..."
     value={value}

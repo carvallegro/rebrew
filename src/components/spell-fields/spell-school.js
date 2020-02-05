@@ -10,6 +10,7 @@ export const SpellSchool = ({ value, ...props }) => {
     <FormControl label="School" htmlFor="school" required>
       <Select
         required
+        id="school"
         name="school"
         placeholder="Divination, Abjuration, Necromancy..."
         items={spellSchools}
