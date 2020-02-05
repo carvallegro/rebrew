@@ -4,7 +4,7 @@ import SpellComponents from './spell-components'
 
 export const SpellDescription = ({ value, ...props }) => (
   <TextArea
-    name="description"
+    name="desc"
     label="Description"
     required
     placeholder="Enter the description"
