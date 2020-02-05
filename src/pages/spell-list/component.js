@@ -13,7 +13,7 @@ import {
   VFlow
 } from 'bold-ui'
 
-import { spellLevels } from '../../utils'
+import { spellLevels } from '../../spell-utils'
 import SpellCard from '../../components/spell-card'
 
 export const SpellListPage = ({ spells = [] }) => {
@@ -55,7 +55,7 @@ export const SpellListPage = ({ spells = [] }) => {
             (spell, key) => (
               <Fragment key={key}>
                 <Cell xs={12}>
-                  <Heading level={2}>{spellLevels[key]}</Heading>
+                  <Heading level={2}>{spellLevels[key].label}</Heading>
                 </Cell>
                 {spell.map(displaySpell)}
               </Fragment>

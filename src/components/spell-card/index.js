@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import { Button, HFlow, Icon, Paper, Tag, Text, VFlow } from 'bold-ui'
 
-import { spellLevels } from '../../utils'
+import { spellLevels } from '../../spell-utils'
 
 import { CardContent, Description } from './styles'
 
@@ -50,7 +50,7 @@ const SpellCard = ({
       >
         <VFlow>
           <Text component="p" fontSize={1} fontStyle="italic">
-            {spellLevels[levelNumber]} {school}
+            {spellLevels[levelNumber].label} {school}
           </Text>
           <div>
             <Text component="p" fontSize={1}>
