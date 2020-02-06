@@ -13,15 +13,9 @@ branches:
 
 install:
   - yarn install --force
-  - yarn global add codecov
 
 jobs:
   include:
-    - stage: test
-      name: "Test"
-      script: yarn test
-    - name: "Coverage"
-      script: codecov
     - stage: build
       name: "Build & Deploy"
       script: yarn build
