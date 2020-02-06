@@ -34,8 +34,8 @@ jobs:
       # run tests!
       - run: yarn test --collectCoverage
 
-      - codecov/upload:
-          file: {{ coverage_report_filepath }}
+#      - codecov/upload:
+#          file: {{ coverage_report_filepath }}
 
 workflows:
   "Test":
