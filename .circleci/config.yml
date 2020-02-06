@@ -6,7 +6,7 @@ version: 2.1
 
 orbs:
   codecov: codecov/codecov@1.0.2
-  gh-pages: sugarshin/gh-pages@0.0.6
+#  gh-pages: sugarshin/gh-pages@0.0.6
 
 workflows:
   "Test & Coverage report":
@@ -19,12 +19,13 @@ workflows:
             branches:
               only:
                 - master
-      - gh-pages/deploy:
-          checkout: false
-          build-dir: build
-          requires:
-            - build
-          ssh-fingerprints: ${SSH_FINGERPRINT}
+      - gh-pages
+#      - gh-pages/deploy:
+#          checkout: false
+#          build-dir: build
+#          requires:
+#            - build
+#          ssh-fingerprints: ${SSH_FINGERPRINT}
 
 jobs:
   test:
@@ -74,3 +75,27 @@ jobs:
       - run:
           name: Build application
           command: yarn build
+      - persist_to_workspace:
+          root: ~/repo
+          paths: build
+
+  gh-pages:
+    docker:
+      - image: circleci/node:10.15.1
+
+    working_directory: ~/repo
+
+    steps:
+      - attach_workspace:
+          at: build
+      - run:
+          name: Install and configure dependencies
+          command: |
+            npm install -g --silent gh-pages@2.0.1
+            git config user.email "${CIRCLE_USERNAME}@users.noreply.github.com"
+            git config user.name "${CIRCLE_USERNAME}"
+      - run:
+          name: Deploy docs to gh-pages branch
+          command: gh-pages --dist build
+
+
