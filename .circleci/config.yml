@@ -20,6 +20,8 @@ workflows:
               only:
                 - master
       - gh-pages
+          requires:
+            - build
 #      - gh-pages/deploy:
 #          checkout: false
 #          build-dir: build
