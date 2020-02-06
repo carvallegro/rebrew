@@ -25,7 +25,7 @@ workflows:
 jobs:
   test:
     docker:
-      - image: circleci/node:10.15.1
+      - image: circleci/node:12.14.0
 
     working_directory: ~/repo
 
@@ -50,7 +50,7 @@ jobs:
 
   build:
     docker:
-      - image: circleci/node:10.15.1
+      - image: circleci/node:12.14.0
 
     working_directory: ~/repo
 
@@ -76,7 +76,7 @@ jobs:
 
   gh-pages:
     docker:
-      - image: circleci/node:10.15.1
+      - image: circleci/node:12.14.0
 
     working_directory: ~/repo
 
