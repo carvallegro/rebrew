@@ -20,7 +20,6 @@ workflows:
               only:
                 - master
       - gh-pages/deploy:
-          attach-workspace: true
           checkout: false
           build-dir: build
           requires:
