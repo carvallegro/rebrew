@@ -1,0 +1,75 @@
+# JavaScript Node CircleCI 2.0 configuration file
+#
+# Check https://circleci.com/docs/2.0/language-javascript/ for more details
+#
+version: 2.1
+
+orbs:
+  codecov: codecov/codecov@1.0.2
+  gh-pages: sugarshin/gh-pages@0.0.6
+
+workflows:
+  "Test & Coverage report":
+    jobs:
+      - test
+  "Build and Deploy to GH Pages":
+    jobs:
+      - build:
+          filters:
+            branches:
+              only:
+                - master
+      - gh-pages/deploy:
+          build-dir: build
+          requires:
+            - build
+          ssh-fingerprints: ${SSH_FINGERPRINT}
+
+jobs:
+  test:
+    docker:
+      - image: circleci/node:10.15.1
+
+    working_directory: ~/repo
+
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "package.json" }}
+            - v1-dependencies-
+      - run:
+          name: Install dependencies
+          command: yarn install
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "package.json" }}
+      - run:
+          name: Run Jest tests
+          command: yarn test
+      - codecov/upload:
+          file: coverage/lcov.info
+
+  build:
+    docker:
+      - image: circleci/node:10.15.1
+
+    working_directory: ~/repo
+
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "package.json" }}
+            - v1-dependencies-
+      - run:
+          name: Install dependencies
+          command: yarn install
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "package.json" }}
+      - run:
+          name: Build application
+          command: yarn build
