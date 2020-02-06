@@ -26,18 +26,16 @@ jobs:
 
       - run: yarn install
 
-      #      - run: yarn global add codecov
-
       - save_cache:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
 
       # run tests!
-      - run: yarn test
+      - run: yarn test --coverage
 
       - codecov/upload:
-          file: {{ coverage_report_filepath }}
+#          file: {{ coverage_report_filepath }}
 
 workflows:
   "Test":
