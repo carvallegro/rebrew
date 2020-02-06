@@ -19,7 +19,7 @@ workflows:
             branches:
               only:
                 - master
-      - gh-pages
+      - gh-pages:
           requires:
             - build
 #      - gh-pages/deploy:
