@@ -2,7 +2,7 @@ import * as storage from 'redux-storage'
 import localforage from 'localforage'
 import createEngine from 'redux-storage-engine-localforage'
 
-import { createSpell, deleteSpell } from './spells'
+import { saveSpell, deleteSpell } from './spells'
 
 const localForageConfig = {
   driver: [localforage.WEBSQL, localforage.INDEXEDDB, localforage.LOCALSTORAGE],
@@ -17,7 +17,7 @@ const engine = createEngine('rebrew_offline_store', localForageConfig)
 export const offlineMiddleware = storage.createMiddleware(
   engine,
   [],
-  [`${createSpell}`, `${deleteSpell}`]
+  [`${saveSpell}`, `${deleteSpell}`]
 )
 
 export const offlineReducerListener = storage.reducer

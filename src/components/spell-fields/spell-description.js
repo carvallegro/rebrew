@@ -8,6 +8,7 @@ export const SpellDescription = ({ value, ...props }) => (
     label="Description"
     required
     placeholder="Enter the description"
+    value={value}
     {...props}
   />
 )
