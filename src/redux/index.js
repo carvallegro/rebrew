@@ -1,7 +1,8 @@
 import { configureStore, combineReducers } from '@reduxjs/toolkit'
 
-import { featsReducer } from './feats'
-import { spellsReducer } from './spells'
+import featsReducer from './feats'
+import spellsReducer from './spells'
+
 import {
   offlineLoad,
   offlineMiddleware,
