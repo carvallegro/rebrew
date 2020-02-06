@@ -3,6 +3,10 @@
 # Check https://circleci.com/docs/2.0/language-javascript/ for more details
 #
 version: 2
+
+orbs:
+  codecov: codecov/codecov@1.0.2
+
 jobs:
   build:
     docker:
@@ -28,7 +32,7 @@ jobs:
 
       - run: yarn install
 
-      - run: yarn global add codecov
+#      - run: yarn global add codecov
 
       - save_cache:
           paths:
@@ -38,4 +42,7 @@ jobs:
       # run tests!
       - run: yarn test
 
-      - run: codecov
+#      - run: codecov
+
+      - codecov/upload:
+          file: {{ coverage_report_filepath }}
