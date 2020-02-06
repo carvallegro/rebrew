@@ -1,3 +1,4 @@
+import * as R from 'ramda'
 import { createSlice } from '@reduxjs/toolkit'
 
 import srdSpells from './srd_spells'
@@ -13,10 +14,11 @@ const spellsSlice = createSlice({
     createSpell: (state, { payload }) => ({
       ...state,
       [payload.name]: payload
-    })
+    }),
+    deleteSpell: (state, { payload }) => R.omit([payload], state)
   }
 })
 
 export const spellsReducer = spellsSlice.reducer
 
-export const { createSpell } = spellsSlice.actions
+export const { createSpell, deleteSpell } = spellsSlice.actions
