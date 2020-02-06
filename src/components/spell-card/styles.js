@@ -16,3 +16,9 @@ export const Description = styled.div`
     }
   }
 `
+
+export const HeadingWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+`
