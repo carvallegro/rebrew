@@ -13,9 +13,9 @@ import {
   VFlow
 } from 'bold-ui'
 
-import { CardContent, Description, HeadingWrapper } from './styles'
-
 import { spellLevels } from '../../spell-utils'
+
+import { CardContent, Description, HeadingWrapper } from './styles'
 
 const paperStyle = {
   padding: '.5rem 1rem'

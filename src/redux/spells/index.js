@@ -19,6 +19,6 @@ const spellsSlice = createSlice({
   }
 })
 
-export const spellsReducer = spellsSlice.reducer
+export default spellsSlice.reducer
 
 export const { createSpell, deleteSpell } = spellsSlice.actions

@@ -8,4 +8,4 @@ const featSlice = createSlice({
   reducers: {}
 })
 
-export const featsReducer = featSlice.reducer
+export default featSlice.reducer
