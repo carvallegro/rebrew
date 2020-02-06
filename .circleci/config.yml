@@ -89,7 +89,7 @@ jobs:
 
     steps:
       - attach_workspace:
-          at: build
+          at: ~/repo
       - run:
           name: Install and configure dependencies
           command: |
