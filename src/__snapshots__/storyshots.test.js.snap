@@ -559,13 +559,42 @@ exports[`Storyshots Spell Fields/Type Default Render 1`] = `
 </div>
 `;
 
-exports[`Storyshots Spell card Default Render 1`] = `
+exports[`Storyshots Spell card Homebrew Spell 1`] = `
 <div
   className="css-1ckdz6j"
 >
   <div
-    className="css-1gl7d4a"
+    className="css-f24dyb"
   >
+    <div
+      className="css-1gl7d4a"
+    >
+      <button
+        className="css-5sb8u8"
+        onClick={[Function]}
+        type="button"
+      >
+        <span>
+          <svg
+            aria-hidden="true"
+            className="css-n86my2"
+            height="1em"
+            role="img"
+            viewBox="0 0 24 24"
+            width="1em"
+          >
+            <path
+              d="M16.294 8.294a1 1 0 111.414 1.414l-5 5a1 1 0 01-1.414 0l-5.001-5a1 1 0 011.414-1.415l4.294 4.294 4.293-4.293z"
+            />
+          </svg>
+        </span>
+      </button>
+      <span
+        className="css-kjh4ly"
+      >
+        Blinding Flash
+      </span>
+    </div>
     <button
       className="css-5sb8u8"
       onClick={[Function]}
@@ -580,17 +609,149 @@ exports[`Storyshots Spell card Default Render 1`] = `
           viewBox="0 0 24 24"
           width="1em"
         >
-          <path
-            d="M16.294 8.294a1 1 0 111.414 1.414l-5 5a1 1 0 01-1.414 0l-5.001-5a1 1 0 011.414-1.415l4.294 4.294 4.293-4.293z"
+          <defs>
+            <path
+              d="M2 12a2 2 0 11-.001 4.001A2 2 0 012 12zm0-6a2 2 0 11-.001 4.001A2 2 0 012 6zm0-6a2 2 0 11-.001 4.001A2 2 0 012 0z"
+              id="dots_svg__a"
+            />
+          </defs>
+          <use
+            transform="translate(10 4)"
+            xlinkHref="#dots_svg__a"
           />
         </svg>
       </span>
     </button>
-    <span
-      className="css-kjh4ly"
+  </div>
+  <div
+    className="css-15r1rym"
+    hidden={true}
+  >
+    <div
+      className="css-j7qwjs"
     >
-      Alter Self
-    </span>
+      <div
+        className="css-wstido"
+      >
+        <p
+          className="css-lc0qpe"
+        >
+          5th level
+           
+          Illusion
+        </p>
+      </div>
+      <div
+        className="css-wstido"
+      >
+        <div>
+          <p
+            className="css-1ocwri7"
+          >
+            <b>
+              Casting time:
+            </b>
+             
+            1 action
+          </p>
+          <p
+            className="css-1ocwri7"
+          >
+            <b>
+              Range:
+            </b>
+             
+            30 feet
+          </p>
+          <p
+            className="css-1ocwri7"
+          >
+            <b>
+              Components:
+            </b>
+             
+            S, M
+          </p>
+          <p
+            className="css-1ocwri7"
+          >
+            <b>
+              Duration:
+            </b>
+             
+            1 minute
+          </p>
+        </div>
+      </div>
+      <div
+        className="css-wstido"
+      >
+        <div
+          className="css-16ewyma"
+        >
+          <p
+            className="css-1ocwri7"
+          >
+            A creature within range is subjected to a blinding flash before its eyes. The target must make both a Constitution saving throw and a Dexterity saving throw. If the target succeeds on both saves, nothing happens. If the target fails one save but succeeds on the other, it is blinded for the duration. If it fails both saves, it is blinded for the duration, and stunned until the end of your next turn.
+          </p>
+          <p
+            className="css-1ocwri7"
+          >
+            At the end of each of its turns, a blinded target can make a new Constitution saving throw, ending the effect on a success. It cannot make this saving throw if it is stunned or otherwise incapacitated.
+          </p>
+          <p
+            className="css-1ocwri7"
+          >
+            At Higher Levels. When you cast this spell using a spell slot of 6th level or higher, you can target one additional creature for each slot level above 5th.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Spell card Srd Spell 1`] = `
+<div
+  className="css-1ckdz6j"
+>
+  <div
+    className="css-f24dyb"
+  >
+    <div
+      className="css-1gl7d4a"
+    >
+      <button
+        className="css-5sb8u8"
+        onClick={[Function]}
+        type="button"
+      >
+        <span>
+          <svg
+            aria-hidden="true"
+            className="css-n86my2"
+            height="1em"
+            role="img"
+            viewBox="0 0 24 24"
+            width="1em"
+          >
+            <path
+              d="M16.294 8.294a1 1 0 111.414 1.414l-5 5a1 1 0 01-1.414 0l-5.001-5a1 1 0 011.414-1.415l4.294 4.294 4.293-4.293z"
+            />
+          </svg>
+        </span>
+      </button>
+      <span
+        className="css-kjh4ly"
+      >
+        Alter Self
+      </span>
+      <span
+        className="css-1eji9m2"
+      >
+        SRD
+      </span>
+    </div>
   </div>
   <div
     className="css-15r1rym"
@@ -661,7 +822,12 @@ exports[`Storyshots Spell card Default Render 1`] = `
           <p
             className="css-1ocwri7"
           >
-            You assume a different form. When you cast the spell, choose one of the following options, the effects of which last for the duration of the spell. While the spell lasts, you can end one option as an action to gain the benefits of a different one.\\nAquatic Adaptation: You adapt your body to
+            You assume a different form. When you cast the spell, choose one of the following options, the effects of which last for the duration of the spell. While the spell lasts, you can end one option as an action to gain the benefits of a different one.
+          </p>
+          <p
+            className="css-1ocwri7"
+          >
+            Aquatic Adaptation: You adapt your body to
           </p>
         </div>
       </div>

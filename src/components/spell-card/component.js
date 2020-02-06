@@ -1,3 +1,4 @@
+import * as R from 'ramda'
 import React, { Fragment, useRef, useState } from 'react'
 import PropTypes from 'prop-types'
 import {
@@ -134,7 +135,11 @@ SpellCard.propTypes = {
   components: PropTypes.string,
   duration: PropTypes.string,
   desc: PropTypes.string,
-  onDelete: PropTypes.func.isRequired
+  onDelete: PropTypes.func
+}
+
+SpellCard.defaultProps = {
+  onDelete: R.identity
 }
 
 export default SpellCard
