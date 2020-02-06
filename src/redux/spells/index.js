@@ -11,7 +11,7 @@ const spellsSlice = createSlice({
   name: 'spells',
   initialState: srdSpells,
   reducers: {
-    createSpell: (state, { payload }) => ({
+    saveSpell: (state, { payload }) => ({
       ...state,
       [payload.name]: payload
     }),
@@ -21,4 +21,4 @@ const spellsSlice = createSlice({
 
 export default spellsSlice.reducer
 
-export const { createSpell, deleteSpell } = spellsSlice.actions
+export const { saveSpell, deleteSpell } = spellsSlice.actions

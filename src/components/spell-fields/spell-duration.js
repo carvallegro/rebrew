@@ -8,6 +8,7 @@ export const SpellDuration = ({ value, ...props }) => (
     name="duration"
     label="Duration"
     placeholder="Instaneous, 1 minute, 1 hour..."
+    value={value}
     {...props}
   />
 )

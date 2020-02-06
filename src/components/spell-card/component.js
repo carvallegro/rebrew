@@ -16,6 +16,7 @@ import {
 import { spellLevels } from '../../spell-utils'
 
 import { CardContent, Description, HeadingWrapper } from './styles'
+import { navigate } from '@reach/router'
 
 const paperStyle = {
   padding: '.5rem 1rem'
@@ -81,6 +82,11 @@ const SpellCard = ({
               onClose={handleClose}
               popperProps={{ placement: 'bottom-end' }}
             >
+              <DropdownItem
+                onClick={() => navigate(`spells/edit/${spellName}`)}
+              >
+                Edit
+              </DropdownItem>
               <DropdownItem type="danger" onClick={() => onDelete(spellName)}>
                 Delete
               </DropdownItem>

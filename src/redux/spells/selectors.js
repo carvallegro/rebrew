@@ -12,3 +12,6 @@ export const selectAllSpellNames = createSelector(
   selectAllSpellsIndexedByName,
   Object.keys
 )
+
+export const selectSpellByName = (state, { spellName }) =>
+  R.pathOr([], ['spells', spellName], state)
