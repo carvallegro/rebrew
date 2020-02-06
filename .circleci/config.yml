@@ -102,6 +102,4 @@ jobs:
           fingerprints: ${SSH_FINGERPRINT}
       - run:
           name: Deploy docs to gh-pages branch
-          command: gh-pages --dist build
-
-
+          command: npx gh-pages --dist build
