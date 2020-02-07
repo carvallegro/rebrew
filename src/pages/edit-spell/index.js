@@ -1,8 +1,8 @@
 import React from 'react'
-import SpellForm from '../spell-form'
+import SpellForm from '../../components/spell-form'
 import { Breadcrumbs, Link, VFlow } from 'bold-ui'
 import { navigate } from '@reach/router'
-import { SpellIntroduction } from '../spell-form/component'
+import { SpellIntroduction } from '../../components/spell-form/component'
 import connect from './connect'
 
 const EditBreadcrumb = () => (

@@ -16,7 +16,7 @@ import {
   SpellDuration,
   SpellComponents,
   SpellDescription
-} from '../../components/spell-fields'
+} from '../spell-fields'
 
 const FORM_INITIAL_VALUES = {
   name: 'Name',
