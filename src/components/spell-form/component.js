@@ -19,7 +19,7 @@ import {
 } from '../spell-fields'
 
 const FORM_INITIAL_VALUES = {
-  name: 'Name',
+  name: '',
   srd: false,
   level_number: '',
   school: '',

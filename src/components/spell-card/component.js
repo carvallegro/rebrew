@@ -1,6 +1,10 @@
 import * as R from 'ramda'
+import copy from 'clipboard-copy'
+
 import React, { Fragment, useRef, useState } from 'react'
 import PropTypes from 'prop-types'
+import { navigate } from '@reach/router'
+import styled from '@emotion/styled'
 import {
   Button,
   Dropdown,
@@ -16,11 +20,25 @@ import {
 import { spellLevels } from '../../spell-utils'
 
 import { CardContent, Description, HeadingWrapper } from './styles'
-import { navigate } from '@reach/router'
 
 const paperStyle = {
   padding: '.5rem 1rem'
 }
+
+const MenuItemAlign = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+`
+
+const MenuItem = ({ icon, text, type, onClick }) => (
+  <DropdownItem type={type} onClick={onClick}>
+    <MenuItemAlign>
+      <Icon size={1.2} icon={icon} style={{ marginRight: '0.2rem' }} />
+      {text}
+    </MenuItemAlign>
+  </DropdownItem>
+)
 
 const SpellCard = ({
   spellName,
@@ -45,6 +63,17 @@ const SpellCard = ({
     menuRef.current.focus()
   }
 
+  const spell = {
+    spellName,
+    srd,
+    levelNumber,
+    school,
+    castingTime,
+    range,
+    components,
+    duration,
+    desc
+  }
   return (
     <Paper style={paperStyle} {...props}>
       <HeadingWrapper>
@@ -64,7 +93,6 @@ const SpellCard = ({
           </Text>
           {srd && <Tag type="normal">SRD</Tag>}
         </HFlow>
-
         {!srd && (
           <Fragment>
             <Button
@@ -75,21 +103,28 @@ const SpellCard = ({
             >
               <Icon icon="dots" />
             </Button>
-
             <Dropdown
               anchorRef={menuRef}
               open={menuOpen}
               onClose={handleClose}
               popperProps={{ placement: 'bottom-end' }}
             >
-              <DropdownItem
+              <MenuItem
+                icon="penOutline"
+                text="Edit"
                 onClick={() => navigate(`spells/edit/${spellName}`)}
-              >
-                Edit
-              </DropdownItem>
-              <DropdownItem type="danger" onClick={() => onDelete(spellName)}>
-                Delete
-              </DropdownItem>
+              />
+              <MenuItem
+                icon="copyOutline"
+                text="Copy to clipboard"
+                onClick={() => copy(JSON.stringify(spell))}
+              />
+              <MenuItem
+                icon="trashOutline"
+                text="Delete"
+                type="danger"
+                onClick={() => onDelete(spellName)}
+              />
             </Dropdown>
           </Fragment>
         )}
