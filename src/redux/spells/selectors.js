@@ -8,6 +8,11 @@ export const selectAllSpells = createSelector(
   Object.values
 )
 
+export const selectAllSpellsWithoutSrd = createSelector(
+  selectAllSpells,
+  R.pipe(R.reject(R.propEq('srd', true)), R.indexBy(R.prop('name')))
+)
+
 export const selectAllSpellNames = createSelector(
   selectAllSpellsIndexedByName,
   Object.keys

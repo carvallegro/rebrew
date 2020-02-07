@@ -2,6 +2,7 @@ import * as R from 'ramda'
 import { createSlice } from '@reduxjs/toolkit'
 
 import srdSpells from './srd_spells'
+import { restoreData } from '../actions'
 
 /*
  JQ command to index spells by name:
@@ -16,6 +17,12 @@ const spellsSlice = createSlice({
       [payload.name]: payload
     }),
     deleteSpell: (state, { payload }) => R.omit([payload], state)
+  },
+  extraReducers: {
+    [restoreData]: (state, { payload }) => ({
+      ...state,
+      ...payload.spells
+    })
   }
 })
 
