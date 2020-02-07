@@ -9,7 +9,7 @@ We are using the [Bold Design system](https://bold.bridge.ufsc.br/)
 
 ### Routing
 
-Reach router https://reach.tech/router 
+[Reach router](https://reach.tech/router) 
 
 ## Setup
 
