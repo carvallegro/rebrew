@@ -43,7 +43,7 @@ export const useOfflineDataRestoration = () => {
         setDataLoaded(true)
       })
       .catch(() => setLoadErrored(true))
-  }, [setDataLoaded, setLoadErrored])
+  }, [store, setDataLoaded, setLoadErrored])
 
   return { hasDataLoaded, loadErrored }
 }
