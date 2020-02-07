@@ -8,7 +8,6 @@ import { restoreData } from '../actions'
  JQ command to index spells by name:
   jq 'INDEX(.name)' spells_file.json > srd_spells.json
  */
-
 const spellsSlice = createSlice({
   name: 'spells',
   initialState: srdSpells,

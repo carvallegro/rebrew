@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import { Router } from '@reach/router'
 
 import Layout from './components/layout'
@@ -7,15 +7,26 @@ import SpellListPage from './pages/spell-list'
 import CreateSpellPage from './pages/create-spell'
 import EditSpellPage from './pages/edit-spell'
 
-const App = () => (
-  <Router>
-    <Home path="/" />
-    <Layout path="spells">
-      <SpellListPage path="/" />
-      <CreateSpellPage path="create" />
-      <EditSpellPage path="edit/:spellName" />
-    </Layout>
-  </Router>
-)
+import { Alert } from 'bold-ui'
+import { useOfflineDataRestoration } from './redux/offline'
+
+const App = () => {
+  const { hasDataLoaded, loadErrored } = useOfflineDataRestoration()
+  return (
+    <Fragment>
+      {loadErrored && <Alert type="warning">Local data failed to load.</Alert>}
+      {hasDataLoaded && (
+        <Router>
+          <Home path="/" />
+          <Layout path="spells">
+            <SpellListPage path="/" />
+            <CreateSpellPage path="create" />
+            <EditSpellPage path="edit/:spellName" />
+          </Layout>
+        </Router>
+      )}
+    </Fragment>
+  )
+}
 
 export default App

@@ -1,6 +1,10 @@
 import localforage from 'localforage'
+import { useStore } from 'react-redux'
 import watch from 'redux-watch'
+
 import { selectAllSpellsWithoutSrd } from './spells/selectors'
+import { useEffect, useState } from 'react'
+import { restoreData } from './actions'
 
 localforage.config({
   driver: [localforage.INDEXEDDB, localforage.LOCALSTORAGE],
@@ -20,10 +24,26 @@ const saveSpell = newVal =>
 
 export const setupStoreWatch = store => {
   store.subscribe(watch(store.getState, 'spells')(saveSpell))
-
   return store
 }
 
 export const restoreDataFromStorage = async () => ({
   spells: await getItem('spells')
 })
+
+export const useOfflineDataRestoration = () => {
+  const store = useStore()
+  const [hasDataLoaded, setDataLoaded] = useState(false)
+  const [loadErrored, setLoadErrored] = useState(false)
+
+  useEffect(() => {
+    restoreDataFromStorage()
+      .then(data => {
+        store.dispatch(restoreData(data))
+        setDataLoaded(true)
+      })
+      .catch(() => setLoadErrored(true))
+  }, [setDataLoaded, setLoadErrored])
+
+  return { hasDataLoaded, loadErrored }
+}
