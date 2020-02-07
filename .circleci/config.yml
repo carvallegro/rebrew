@@ -4,9 +4,16 @@
 #
 version: 2.1
 
+# One of the most amazing feature of Circle CI: Orbs
+# They're basically shareable and reusable config package
+# Examples of shareable jobs:
+# - Deploy bundle to ZIS Registry
 orbs:
   codecov: codecov/codecov@1.0.2
 
+# Write your CI config like your code:
+# Decouple it in workflows and jobs
+# Makes it easier to read and understand.
 workflows:
   "Test & Build":
     jobs:
@@ -92,6 +99,8 @@ jobs:
     working_directory: ~/repo
     steps:
       - checkout
+      # Still not sure what that is or how that works;
+      # it's linked to persist_to_workspace I think.
       - attach_workspace:
           at: ~/repo
       - run: npx semantic-release
@@ -115,5 +124,4 @@ jobs:
           fingerprints: ${SSH_FINGERPRINT}
       - run:
           name: Deploy docs to gh-pages branch
-          command: npx gh-pages -f --dist build
-
+          command: npx gh-pages -f --message "release ${CIRCLE_TAG}" --dist build
