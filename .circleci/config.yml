@@ -32,7 +32,7 @@ workflows:
       - gh-pages:
           requires:
             - build
-          filters:
+          filters: # Needs the filter property because the previous one has it
             tags:
               only: /^v.*/
             branches:
@@ -95,7 +95,6 @@ jobs:
       - attach_workspace:
           at: ~/repo
       - run: npx semantic-release
-
 
   gh-pages:
     docker:
