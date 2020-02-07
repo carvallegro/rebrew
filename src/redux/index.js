@@ -1,26 +1,14 @@
-import { configureStore, combineReducers } from '@reduxjs/toolkit'
+import store from './createStore'
+import { restoreDataFromStorage, setupStoreWatch } from './offline'
+import { restoreData } from './actions'
 
-import featsReducer from './feats'
-import spellsReducer from './spells'
+const restore = async () => {
+  const data = await restoreDataFromStorage()
+  store.dispatch(restoreData(data))
+}
 
-import {
-  offlineLoad,
-  offlineMiddleware,
-  offlineReducerListener
-} from './offline-storage'
+restore()
+  .then(() => console.log('DATA RESTORED'))
+  .catch(() => console.error('RESTORATION FAILED'))
 
-const reducer = offlineReducerListener(
-  combineReducers({
-    feats: featsReducer,
-    spells: spellsReducer
-  })
-)
-
-export const store = configureStore({
-  reducer: reducer,
-  middleware: [offlineMiddleware]
-})
-
-offlineLoad(store)
-  .then(newState => console.log('Loaded state:', newState))
-  .catch(() => console.log('Failed to load previous state'))
+export default setupStoreWatch(store)
