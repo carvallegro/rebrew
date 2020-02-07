@@ -10,10 +10,10 @@ orbs:
 workflows:
   "Test & Build":
     jobs:
-      #      - test
+      - test
       - build:
-          #          requires:
-          #            - test
+          requires:
+            - test
           filters:
             branches:
               only:
