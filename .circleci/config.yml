@@ -32,6 +32,11 @@ workflows:
       - gh-pages:
           requires:
             - build
+          filters:
+            tags:
+              only: /^v.*/
+            branches:
+              ignore: /.*/
 
 jobs:
   test:
