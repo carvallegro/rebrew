@@ -21,6 +21,7 @@ import {
 import { spellLevels } from '../../spell-utils'
 import SpellCard from '../../components/spell-card'
 import { redirectClipboardTo } from '../../clipboard'
+import ImportJsonFile from '../../components/import-json-file'
 
 const formatResult = R.pipe(
   R.sortBy(R.prop('name')),
@@ -53,8 +54,11 @@ export const SpellListPage = ({ spells = [] }) => {
       <Heading level={1}>Spells</Heading>
 
       <Text component="p" fontSize={1}>
-        To import spells, paste your JSON data in this page.
+        To import spells, use the file loader below or paste your JSON data in
+        this page.
       </Text>
+
+      <ImportJsonFile />
 
       <Grid gap={0.5} alignItems="center">
         <Cell lg={3} md={3} sm={4} xs={12}>
@@ -64,9 +68,7 @@ export const SpellListPage = ({ spells = [] }) => {
             name="search-spell-by-name"
             placeholder="Type spell name"
             value={searchValue}
-            onChange={e => {
-              updateSearch(e.target.value)
-            }}
+            onChange={e => updateSearch(e.target.value)}
             onPaste={e => {
               e.stopPropagation()
               updateSearch(e.target.value)
