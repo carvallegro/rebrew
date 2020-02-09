@@ -1,10 +1,11 @@
 import * as R from 'ramda'
-import { SPELL_ATTRIBUTES } from '../../spell-utils'
-import { Alert, Breadcrumbs, Button, Link, Text, VFlow } from 'bold-ui'
-import { redirectClipboardTo } from '../../clipboard'
-import { navigate } from '@reach/router'
-import React, { Fragment } from 'react'
+import React from 'react'
 import ReactJson from 'react-json-view'
+import { navigate } from '@reach/router'
+import { Alert, Breadcrumbs, Button, Link, Text, VFlow } from 'bold-ui'
+
+import { SPELL_ATTRIBUTES } from '../../spell-utils'
+import { redirectClipboardTo } from '../../clipboard'
 
 const ImportPage = ({ location, importSpells }) => {
   const { invalidJson, data } = R.pathOr({}, ['state'], location)

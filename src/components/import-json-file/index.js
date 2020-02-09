@@ -14,7 +14,7 @@ const ImportJsonFile = () => {
   const [files, setFiles] = useState([])
 
   useEffect(() => {
-    files.map(f => {
+    files.forEach(f => {
       const reader = new FileReader()
       reader.onload = readFile
       reader.readAsText(f)
