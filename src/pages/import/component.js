@@ -16,6 +16,7 @@ const ImportPage = ({ location, importSpells }) => {
     R.indexBy(R.prop('name'))
   )
 
+  const isValidJson = !isDataEmpty && !invalidJson
   return (
     <VFlow
       vSpacing={1}
@@ -53,32 +54,46 @@ const ImportPage = ({ location, importSpells }) => {
           <Link onClick={() => navigate('../spells')}>Go back</Link>
         </Alert>
       )}
-      {!isDataEmpty && !invalidJson && (
-        <Fragment>
-          <Button
-            kind="primary"
-            skin="default"
-            size="medium"
-            onClick={() => {
-              importSpells(importSpellData(normalizedData))
-              navigate('../spells')
-            }}
-          >
-            Import {normalizedData.length} element
-            {normalizedData.length > 1 && 's'}
-          </Button>
-          <ReactJson
-            src={normalizedData}
-            name={false}
-            displayDataTypes={false}
-            displayObjectSize={true}
-            enableClipboard={false}
-            iconStyle="square"
-            indentWidth={2}
-            theme="grayscale:inverted"
-            shouldCollapse={() => false}
-          />
-        </Fragment>
+      {isValidJson && (
+        <Button
+          kind="primary"
+          skin="default"
+          size="medium"
+          onClick={() => {
+            importSpells(importSpellData(normalizedData))
+            navigate('../spells')
+          }}
+        >
+          Import {normalizedData.length} element
+          {normalizedData.length > 1 && 's'}
+        </Button>
+      )}
+      {isValidJson && (
+        <ReactJson
+          src={normalizedData}
+          name={false}
+          displayDataTypes={false}
+          displayObjectSize={true}
+          enableClipboard={false}
+          iconStyle="square"
+          indentWidth={2}
+          theme="grayscale:inverted"
+          shouldCollapse={() => false}
+        />
+      )}
+      {isValidJson && (
+        <Button
+          kind="primary"
+          skin="default"
+          size="medium"
+          onClick={() => {
+            importSpells(importSpellData(normalizedData))
+            navigate('../spells')
+          }}
+        >
+          Import {normalizedData.length} element
+          {normalizedData.length > 1 && 's'}
+        </Button>
       )}
     </VFlow>
   )
