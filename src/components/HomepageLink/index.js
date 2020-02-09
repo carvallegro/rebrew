@@ -3,23 +3,24 @@ import PropTypes from 'prop-types'
 import { navigate } from '@reach/router'
 import { Icon, Paper, Text } from 'bold-ui'
 
-const style = {
+const getStyle = disabled => ({
   padding: '6px 16px',
   display: 'flex',
   justifyContent: 'space-between',
   alignItems: 'center',
-  cursor: 'pointer'
-}
+  opacity: disabled ? '50%' : 'inherit',
+  cursor: disabled ? 'inherit' : 'pointer'
+})
 
-const HomepageLink = ({ text, to }) => {
+const HomepageLink = ({ text, to, disabled }) => {
   const [elevation, setElevation] = useState(0)
   return (
     <Paper
-      style={style}
-      onClick={() => navigate(to)}
+      style={getStyle(disabled)}
+      onClick={() => !disabled && navigate(to)}
       elevation={elevation}
-      onMouseEnter={() => setElevation(10)}
-      onMouseLeave={() => setElevation(0)}
+      onMouseEnter={() => !disabled && setElevation(10)}
+      onMouseLeave={() => !disabled && setElevation(0)}
     >
       <Text component="p" fontSize={1.25}>
         {text}
@@ -31,7 +32,8 @@ const HomepageLink = ({ text, to }) => {
 
 HomepageLink.propTypes = {
   HomepageLink: PropTypes.string,
-  to: PropTypes.string
+  to: PropTypes.string,
+  disabled: PropTypes.bool
 }
 
 export default HomepageLink
