@@ -3,20 +3,21 @@ import React, { Fragment, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import { navigate } from '@reach/router'
 import { useFormik } from 'formik'
-import * as Yup from 'yup'
 
 import { Button, Cell, Grid, HFlow, Text } from 'bold-ui'
 
 import {
-  SpellName,
-  SpellType,
-  SpellSchool,
   SpellCastingTime,
-  SpellRange,
-  SpellDuration,
   SpellComponents,
-  SpellDescription
+  SpellDescription,
+  SpellDuration,
+  SpellName,
+  SpellRange,
+  SpellSchool,
+  SpellType
 } from '../spell-fields'
+import { generateSpellSchema } from '../../spell-utils'
+import { formModes } from '../../utils'
 
 const FORM_INITIAL_VALUES = {
   name: '',
@@ -29,47 +30,6 @@ const FORM_INITIAL_VALUES = {
   components: '',
   desc: ''
 }
-
-const eqInsensitive = R.curry(
-  (a, b) => String(a).toLowerCase() === String(b).toLowerCase()
-)
-
-const generateSpellSchema = (spellNames, mode) =>
-  Yup.object().shape({
-    name: Yup.string()
-      .trim()
-      .nullable()
-      .test(
-        'notAnExistingSpellNameTest',
-        'There is already a spell with that name',
-        value =>
-          mode === formModes.EDIT || !R.find(eqInsensitive(value), spellNames)
-      )
-      .required('You must enter a name'),
-    level_number: Yup.string()
-      .nullable()
-      .trim()
-      .required('You must select a spell type'),
-    school: Yup.string()
-      .nullable()
-      .trim()
-      .required('You must select a school of magic'),
-    casting_time: Yup.string()
-      .trim()
-      .required('You must enter a casting time'),
-    range: Yup.string()
-      .trim()
-      .required('You must enter a range'),
-    duration: Yup.string()
-      .trim()
-      .required('You must enter a duration'),
-    components: Yup.string()
-      .trim()
-      .required('You must select at least one component'),
-    desc: Yup.string()
-      .trim()
-      .required('You must enter a description')
-  })
 
 export const SpellIntroduction = () => (
   <Fragment>
@@ -88,11 +48,6 @@ export const SpellIntroduction = () => (
     </Text>
   </Fragment>
 )
-
-const formModes = {
-  CREATE: 'create',
-  EDIT: 'edit'
-}
 
 const SpellForm = ({
   mode,

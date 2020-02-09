@@ -1,7 +1,7 @@
 import * as R from 'ramda'
 import copy from 'clipboard-copy'
 
-import React, { Fragment, useMemo, useState } from 'react'
+import React, { useMemo, useState } from 'react'
 import PropTypes from 'prop-types'
 import { navigate } from '@reach/router'
 import {
@@ -12,6 +12,7 @@ import {
   Grid,
   Heading,
   Icon,
+  Text,
   TextField,
   Tooltip,
   VFlow
@@ -19,6 +20,7 @@ import {
 
 import { spellLevels } from '../../spell-utils'
 import SpellCard from '../../components/spell-card'
+import { redirectClipboardTo } from '../../clipboard'
 
 const formatResult = R.pipe(
   R.sortBy(R.prop('name')),
@@ -29,31 +31,6 @@ const filterByNameCaseInsensitive = searchValue =>
   R.filter(spell =>
     R.includes(searchValue.trim().toLowerCase())(spell.name.toLowerCase())
   )
-
-const SpellList = ({ spellGroups }) => (
-  <Grid gap={2} gapVertical={1} wrap>
-    {Object.keys(spellGroups).length === 0 && (
-      <Cell xs={12}>
-        <Heading level={3}>
-          <i>No result</i>
-        </Heading>
-      </Cell>
-    )}
-    {Object.values(
-      R.mapObjIndexed(
-        (spell, key) => (
-          <Fragment key={key}>
-            <Cell xs={12}>
-              <Heading level={2}>{spellLevels[key].label}</Heading>
-            </Cell>
-            {spell.map(displaySpell)}
-          </Fragment>
-        ),
-        spellGroups
-      )
-    )}
-  </Grid>
-)
 
 export const SpellListPage = ({ spells = [] }) => {
   const [searchValue, updateSearch] = useState('')
@@ -72,7 +49,13 @@ export const SpellListPage = ({ spells = [] }) => {
   }, [searchValue, includeSrd, spells])
 
   return (
-    <VFlow>
+    <VFlow onPaste={redirectClipboardTo('spells/import')}>
+      <Heading level={1}>Spells</Heading>
+
+      <Text component="p" fontSize={1}>
+        To import spells, paste your JSON data in this page.
+      </Text>
+
       <Grid gap={0.5} alignItems="center">
         <Cell lg={3} md={3} sm={4} xs={12}>
           <TextField
@@ -81,7 +64,13 @@ export const SpellListPage = ({ spells = [] }) => {
             name="search-spell-by-name"
             placeholder="Type spell name"
             value={searchValue}
-            onChange={e => updateSearch(e.target.value)}
+            onChange={e => {
+              updateSearch(e.target.value)
+            }}
+            onPaste={e => {
+              e.stopPropagation()
+              updateSearch(e.target.value)
+            }}
           />
         </Cell>
 
@@ -93,6 +82,8 @@ export const SpellListPage = ({ spells = [] }) => {
             onChange={() => setIncludeSrd(!includeSrd)}
           />
         </Cell>
+
+        <Cell flexGrow={1} />
 
         <Cell>
           <ButtonGroup>
@@ -133,6 +124,27 @@ export const SpellListPage = ({ spells = [] }) => {
 SpellListPage.propTypes = {
   spells: PropTypes.array.isRequired
 }
+
+const SpellList = ({ spellGroups }) => (
+  <Grid gap={2} gapVertical={1} wrap>
+    {Object.keys(spellGroups).length === 0 && (
+      <Cell xs={12}>
+        <Heading level={3}>
+          <i>No result</i>
+        </Heading>
+      </Cell>
+    )}
+    {R.pipe(
+      R.mapObjIndexed((spell, key) => [
+        <Cell key={key} xs={12}>
+          <Heading level={2}>{spellLevels[key].label}</Heading>
+        </Cell>,
+        spell.map(displaySpell)
+      ]),
+      Object.values
+    )(spellGroups)}
+  </Grid>
+)
 
 const displaySpell = (spell, index) => (
   <Cell key={index} lg={3} md={4} sm={6} xs={12}>

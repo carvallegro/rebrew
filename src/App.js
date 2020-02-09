@@ -6,6 +6,7 @@ import Home from './pages/Home'
 import SpellListPage from './pages/spell-list'
 import CreateSpellPage from './pages/create-spell'
 import EditSpellPage from './pages/edit-spell'
+import ImportPage from './pages/import'
 
 import { Alert } from 'bold-ui'
 import { useOfflineDataRestoration } from './redux/offline'
@@ -22,6 +23,7 @@ const App = () => {
             <SpellListPage path="/" />
             <CreateSpellPage path="create" />
             <EditSpellPage path="edit/:spellName" />
+            <ImportPage path="import" />
           </Layout>
         </Router>
       )}

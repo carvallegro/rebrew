@@ -75,19 +75,14 @@ const SpellCard = ({
     desc
   }
   return (
-    <Paper style={paperStyle} {...props}>
+    <Paper style={paperStyle} onClick={() => setOpen(!isOpen)} {...props}>
       <HeadingWrapper>
         <HFlow alignItems="center" hSpacing={0.5} justifyContent="flex-start">
-          {!isOpen && (
-            <Button skin="ghost" size="small" onClick={() => setOpen(true)}>
-              <Icon icon="angleDown" />
-            </Button>
-          )}
-          {isOpen && (
-            <Button skin="ghost" size="small" onClick={() => setOpen(false)}>
-              <Icon icon="angleUp" />
-            </Button>
-          )}
+          <Button skin="ghost" size="small" onClick={() => setOpen(!isOpen)}>
+            {!isOpen && <Icon icon="angleDown" />}
+            {isOpen && <Icon icon="angleUp" />}
+          </Button>
+
           <Text fontSize={1} fontStyle="bold">
             {spellName}
           </Text>

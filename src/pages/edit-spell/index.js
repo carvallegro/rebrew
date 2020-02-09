@@ -7,6 +7,7 @@ import SpellForm from '../../components/spell-form'
 import { SpellIntroduction } from '../../components/spell-form/component'
 
 import connect from './connect'
+import { formModes } from '../../utils'
 
 const EditBreadcrumb = ({ spellName }) => (
   <Breadcrumbs>
@@ -29,7 +30,7 @@ const EditSpellPage = ({ spellName, spell }) => (
     {!R.isEmpty(spell) && (
       <Fragment>
         <SpellIntroduction />
-        <SpellForm mode="edit" spell={spell} />
+        <SpellForm mode={formModes.EDIT} spell={spell} />
       </Fragment>
     )}
     {R.isEmpty(spell) && (

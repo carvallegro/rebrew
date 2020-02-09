@@ -4,6 +4,7 @@ import { Breadcrumbs, Link, VFlow } from 'bold-ui'
 
 import { SpellIntroduction } from '../../components/spell-form/component'
 import SpellForm from '../../components/spell-form'
+import { formModes } from '../../utils'
 
 const CreateBreadcrumb = () => (
   <Breadcrumbs>
@@ -26,7 +27,7 @@ export const CreateSpellPage = () => (
 
     <SpellIntroduction />
 
-    <SpellForm mode="create" />
+    <SpellForm mode={formModes.CREATE} />
   </VFlow>
 )
 
