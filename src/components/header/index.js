@@ -1,9 +1,10 @@
 import React, { useRef, useState } from 'react'
-import { Button, Dropdown, DropdownItem, Icon, Tooltip } from 'bold-ui'
+import { Button, Dropdown, DropdownItem, Icon, Link, Tooltip } from 'bold-ui'
 
 import Logo from '../logo'
 
 import { HeaderWrapper } from './styles'
+import { navigate } from '@reach/router'
 
 const Header = () => {
   const navigationRef = useRef()
@@ -32,10 +33,12 @@ const Header = () => {
         <DropdownItem disabled>Subclasses</DropdownItem>
         <DropdownItem disabled>Backgrounds</DropdownItem>
         <DropdownItem disabled>Feats</DropdownItem>
-        <DropdownItem disabled>Spells</DropdownItem>
+        <DropdownItem onClick={() => navigate('/spells')}>Spells</DropdownItem>
       </Dropdown>
 
-      <Logo title="Rebrew logo" />
+      <Link color="inherit" textDecoration="none" onClick={() => navigate('/')}>
+        <Logo title="Rebrew logo" />
+      </Link>
 
       <Tooltip text="Upload content" placement="bottom-end">
         <Button onClick={handleClick} skin="ghost" size="small" disabled>

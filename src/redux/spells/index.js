@@ -16,7 +16,11 @@ const spellsSlice = createSlice({
       ...state,
       [payload.name]: payload
     }),
-    deleteSpell: (state, { payload }) => R.omit([payload], state)
+    deleteSpell: (state, { payload }) => R.omit([payload], state),
+    importSpells: (state, { payload = {} }) => ({
+      ...state,
+      ...R.omit(Object.keys(srdSpells))(payload)
+    })
   },
   extraReducers: {
     [restoreData]: (state, { payload }) => ({
@@ -28,4 +32,4 @@ const spellsSlice = createSlice({
 
 export default spellsSlice.reducer
 
-export const { saveSpell, deleteSpell } = spellsSlice.actions
+export const { saveSpell, deleteSpell, importSpells } = spellsSlice.actions

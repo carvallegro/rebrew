@@ -37,13 +37,18 @@ exports[`Storyshots Application Layout Default Render 1`] = `
           </svg>
         </span>
       </button>
-      <svg
-        className="css-y9zn78"
-        height="42px"
-        width="45px"
+      <a
+        className="css-1iesxmr"
+        onClick={[Function]}
       >
-        logo.svg
-      </svg>
+        <svg
+          className="css-y9zn78"
+          height="42px"
+          width="45px"
+        >
+          logo.svg
+        </svg>
+      </a>
       <button
         className="css-1y4or5a"
         disabled={true}
@@ -108,13 +113,18 @@ exports[`Storyshots Header Default Render 1`] = `
       </svg>
     </span>
   </button>
-  <svg
-    className="css-y9zn78"
-    height="42px"
-    width="45px"
+  <a
+    className="css-1iesxmr"
+    onClick={[Function]}
   >
-    logo.svg
-  </svg>
+    <svg
+      className="css-y9zn78"
+      height="42px"
+      width="45px"
+    >
+      logo.svg
+    </svg>
+  </a>
   <button
     className="css-1y4or5a"
     disabled={true}
@@ -562,9 +572,10 @@ exports[`Storyshots Spell Fields/Type Default Render 1`] = `
 exports[`Storyshots Spell card Homebrew Spell 1`] = `
 <div
   className="css-1ckdz6j"
+  onClick={[Function]}
 >
   <div
-    className="css-f24dyb"
+    className="css-o2430k"
   >
     <div
       className="css-1gl7d4a"
@@ -714,9 +725,10 @@ exports[`Storyshots Spell card Homebrew Spell 1`] = `
 exports[`Storyshots Spell card Srd Spell 1`] = `
 <div
   className="css-1ckdz6j"
+  onClick={[Function]}
 >
   <div
-    className="css-f24dyb"
+    className="css-o2430k"
   >
     <div
       className="css-1gl7d4a"
