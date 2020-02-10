@@ -31,7 +31,9 @@ const Header = () => {
         <DropdownItem disabled>Races</DropdownItem>
         <DropdownItem disabled>Classes</DropdownItem>
         <DropdownItem disabled>Subclasses</DropdownItem>
-        <DropdownItem disabled>Backgrounds</DropdownItem>
+        <DropdownItem onClick={() => navigate('/backgrounds')}>
+          Backgrounds
+        </DropdownItem>
         <DropdownItem disabled>Feats</DropdownItem>
         <DropdownItem onClick={() => navigate('/spells')}>Spells</DropdownItem>
       </Dropdown>

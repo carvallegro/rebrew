@@ -314,15 +314,15 @@ exports[`Storyshots Spell Fields/Components Default Render 1`] = `
 </div>
 `;
 
-exports[`Storyshots Spell Fields/Description Default Render 1`] = `
+exports[`Storyshots Spell Fields/Wrapper Default Render 1`] = `
 <div
   className="css-0"
 >
   <label
     className="css-1tdx2hb"
-    htmlFor="desc"
+    htmlFor="text"
   >
-    Description
+    Wrapper
     <span
       className="css-fpulsy"
       title="Required field"
@@ -332,8 +332,8 @@ exports[`Storyshots Spell Fields/Description Default Render 1`] = `
   </label>
   <textarea
     className="css-15ndqf0"
-    id="desc"
-    name="desc"
+    id="text"
+    name="text"
     placeholder="Enter the description"
     required={true}
   />
@@ -676,7 +676,7 @@ exports[`Storyshots Spell card Homebrew Spell 1`] = `
           className="css-lc0qpe"
         >
           5th level
-           
+
           Illusion
         </p>
       </div>
@@ -690,7 +690,7 @@ exports[`Storyshots Spell card Homebrew Spell 1`] = `
             <b>
               Casting time:
             </b>
-             
+
             1 action
           </p>
           <p
@@ -699,7 +699,7 @@ exports[`Storyshots Spell card Homebrew Spell 1`] = `
             <b>
               Range:
             </b>
-             
+
             30 feet
           </p>
           <p
@@ -708,7 +708,7 @@ exports[`Storyshots Spell card Homebrew Spell 1`] = `
             <b>
               Components:
             </b>
-             
+
             S, M
           </p>
           <p
@@ -717,7 +717,7 @@ exports[`Storyshots Spell card Homebrew Spell 1`] = `
             <b>
               Duration:
             </b>
-             
+
             1 minute
           </p>
         </div>
@@ -807,7 +807,7 @@ exports[`Storyshots Spell card Srd Spell 1`] = `
           className="css-lc0qpe"
         >
           2nd level
-           
+
           Enchantment
         </p>
       </div>
@@ -821,7 +821,7 @@ exports[`Storyshots Spell card Srd Spell 1`] = `
             <b>
               Casting time:
             </b>
-             
+
             1 action
           </p>
           <p
@@ -830,7 +830,7 @@ exports[`Storyshots Spell card Srd Spell 1`] = `
             <b>
               Range:
             </b>
-             
+
             Self
           </p>
           <p
@@ -839,7 +839,7 @@ exports[`Storyshots Spell card Srd Spell 1`] = `
             <b>
               Components:
             </b>
-             
+
             V, S
           </p>
           <p
@@ -848,7 +848,7 @@ exports[`Storyshots Spell card Srd Spell 1`] = `
             <b>
               Duration:
             </b>
-             
+
             Concentration, up to 1 hour
           </p>
         </div>

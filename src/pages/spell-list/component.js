@@ -159,7 +159,7 @@ const displaySpell = (spell, index) => (
       range={spell.range}
       components={spell.components}
       duration={spell.duration}
-      desc={spell.desc}
+      text={spell.text}
     />
   </Cell>
 )
