@@ -3,9 +3,9 @@ import React from 'react'
 
 export const SpellDescription = ({ value, ...props }) => (
   <TextArea
-    id="desc"
-    name="desc"
-    label="Description"
+    id="text"
+    name="text"
+    label="Wrapper"
     required
     placeholder="Enter the description"
     value={value}

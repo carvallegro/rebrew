@@ -18,8 +18,9 @@ import {
 } from 'bold-ui'
 
 import { spellLevels } from '../../spell-utils'
+import NewlinesToParagraphs from '../newlines-to-paragraphs'
 
-import { CardContent, Description, HeadingWrapper } from './styles'
+import { CardContent, HeadingWrapper } from './styles'
 
 const paperStyle = {
   padding: '.5rem 1rem'
@@ -148,13 +149,7 @@ const SpellCard = ({
               <b>Duration:</b> {duration}
             </Text>
           </div>
-          <Description>
-            {desc.split('\n').map((text, i) => (
-              <Text key={i} component="p" fontSize={1}>
-                {text}
-              </Text>
-            ))}
-          </Description>
+          <NewlinesToParagraphs text={desc} />
         </VFlow>
       </CardContent>
     </Paper>

@@ -10,6 +10,7 @@ import ImportPage from './pages/import'
 
 import { Alert } from 'bold-ui'
 import { useOfflineDataRestoration } from './redux/offline'
+import BackgroundListPage from './pages/background-list'
 
 const App = () => {
   const { hasDataLoaded, loadErrored } = useOfflineDataRestoration()
@@ -19,6 +20,9 @@ const App = () => {
       {hasDataLoaded && (
         <Router>
           <Home path="/" />
+          <Layout path="backgrounds">
+            <BackgroundListPage path="/" />
+          </Layout>
           <Layout path="spells">
             <SpellListPage path="/" />
             <CreateSpellPage path="create" />

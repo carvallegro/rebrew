@@ -31,11 +31,7 @@ const Home = () => (
         <HomepageLink disabled text="Races (coming soon)" to="races" />
       </Cell>
       <Cell md={4} sm={6} xs={12}>
-        <HomepageLink
-          disabled
-          text="Backgrounds (coming soon)"
-          to="backgrounds"
-        />
+        <HomepageLink text="Backgrounds" to="backgrounds" />
       </Cell>
       <Cell md={4} sm={6} xs={12}>
         <HomepageLink disabled text="Feats (coming soon)" to="feats" />
