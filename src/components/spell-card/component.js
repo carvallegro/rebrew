@@ -21,7 +21,6 @@ import { spellLevels } from '../../spell-utils'
 import NewlinesToParagraphs from '../newlines-to-paragraphs'
 
 import { CardContent, HeadingWrapper } from './styles'
-import { Wrapper } from '../newlines-to-paragraphs/styles'
 
 const paperStyle = {
   padding: '.5rem 1rem'
@@ -51,7 +50,7 @@ const SpellCard = ({
   range,
   components,
   duration,
-  text,
+  desc,
   onDelete,
   ...props
 }) => {
@@ -74,7 +73,7 @@ const SpellCard = ({
     range,
     components,
     duration,
-    text
+    desc
   }
   return (
     <Paper style={paperStyle} onClick={() => setOpen(!isOpen)} {...props}>
@@ -150,7 +149,7 @@ const SpellCard = ({
               <b>Duration:</b> {duration}
             </Text>
           </div>
-          <NewlinesToParagraphs text={text} />
+          <NewlinesToParagraphs text={desc} />
         </VFlow>
       </CardContent>
     </Paper>
@@ -166,7 +165,7 @@ SpellCard.propTypes = {
   range: PropTypes.string,
   components: PropTypes.string,
   duration: PropTypes.string,
-  text: PropTypes.string,
+  desc: PropTypes.string,
   onDelete: PropTypes.func
 }
 
