@@ -82,6 +82,437 @@ exports[`Storyshots Application Layout Default Render 1`] = `
 </div>
 `;
 
+exports[`Storyshots Backgrounds Table Default Render 1`] = `
+<table
+  className="css-1iy4mqq"
+>
+  <thead
+    className="css-0"
+  >
+    <tr
+      className="css-0"
+    >
+      <th
+        className="css-124yh7v"
+        data-name="name"
+      >
+        <span
+          className="css-1vben6a"
+          onClick={[Function]}
+        >
+          Name
+          <svg
+            className="css-1uir35z"
+            height="1em"
+            viewBox="0 0 24 24"
+            width="1em"
+          >
+            <polygon
+              className="css-193cgrs"
+              points="12 4.94 16.95 9.89 18.36 8.47 12 2.11 5.64 8.47 7.05 9.89 12 4.94"
+            />
+            <polygon
+              className="css-0"
+              points="12 19.06 7.05 14.11 5.64 15.53 12 21.89 18.36 15.53 16.95 14.11 12 19.06"
+            />
+          </svg>
+        </span>
+      </th>
+      <th
+        className="css-1366b59"
+        data-name="proficiencies"
+      >
+        Proficiencies
+      </th>
+      <th
+        className="css-83rr42"
+        data-name="feature"
+      >
+        Features
+      </th>
+    </tr>
+  </thead>
+  <tbody
+    className="css-0"
+  >
+    <tr
+      className="css-0"
+      onClick={null}
+    >
+      <td
+        className="css-tiri1u"
+      >
+        Acolyte
+      </td>
+      <td
+        className="css-jasaoa"
+      >
+        <div
+          className="css-1sq1gba"
+        >
+          <div
+            className="css-in3yi3"
+          >
+            Gain all of
+          </div>
+          <div
+            className="css-1pnujgh"
+          >
+            Insight, Religion
+          </div>
+        </div>
+      </td>
+      <td
+        className="css-14yspz7"
+      >
+        <div
+          className="css-1sq1gba"
+        >
+          <div
+            className="css-in3yi3"
+          >
+            Shelter of the Faithful
+          </div>
+          <div
+            className="css-1pnujgh"
+          >
+            <div
+              className="css-16ewyma"
+            >
+              <p
+                className="css-1ocwri7"
+              >
+                As an acolyte, you command the respect of those who share your faith, and you can perform the religious ceremonies of your deity. You and your adventuring companions can expect to receive free healing and care at a temple, shrine, or other established presence of your faith, though you must provide any material components needed for spells. Those who share your religion will support you (but only you) at a modest lifestyle.
+              </p>
+              <p
+                className="css-1ocwri7"
+              >
+                You might also have ties to a specific temple dedicated to your chosen deity or pantheon, and you have a residence there. This could be the temple where you used to serve, if you remain on good terms with it, or a temple where you have found a new home. While near your temple, you can call upon the priests for assistance, provided the assistance you ask for is not hazardous and you remain in good standing with your temple.
+              </p>
+            </div>
+          </div>
+        </div>
+      </td>
+    </tr>
+    <tr
+      className="css-0"
+      onClick={null}
+    >
+      <td
+        className="css-tiri1u"
+      >
+        Criminal / Spy
+      </td>
+      <td
+        className="css-jasaoa"
+      >
+        <div
+          className="css-1sq1gba"
+        >
+          <div
+            className="css-in3yi3"
+          >
+            Gain all of
+          </div>
+          <div
+            className="css-1pnujgh"
+          >
+            Deception, Stealth
+          </div>
+        </div>
+      </td>
+      <td
+        className="css-14yspz7"
+      >
+        <div
+          className="css-1sq1gba"
+        >
+          <div
+            className="css-in3yi3"
+          >
+            Criminal Contact
+          </div>
+          <div
+            className="css-1pnujgh"
+          >
+            <div
+              className="css-16ewyma"
+            >
+              <p
+                className="css-1ocwri7"
+              >
+                Who acts like liaison of you to any network of criminals, you have trustworthy and reliable contact from them. How to get the messages from your contact and also to your contact is well known to you. Even over great distances too you can get the messages; specially you know the corrupt caravan masters and also the local messengers even the seedy sailors who can able to deliver messages for you.
+              </p>
+            </div>
+          </div>
+        </div>
+      </td>
+    </tr>
+    <tr
+      className="css-0"
+      onClick={null}
+    >
+      <td
+        className="css-tiri1u"
+      >
+        Folk Hero
+      </td>
+      <td
+        className="css-jasaoa"
+      >
+        <div
+          className="css-1sq1gba"
+        >
+          <div
+            className="css-in3yi3"
+          >
+            Gain all of
+          </div>
+          <div
+            className="css-1pnujgh"
+          >
+            Animal Handling, Survival
+          </div>
+        </div>
+      </td>
+      <td
+        className="css-14yspz7"
+      >
+        <div
+          className="css-1sq1gba"
+        >
+          <div
+            className="css-in3yi3"
+          >
+            Rustic Hospitality
+          </div>
+          <div
+            className="css-1pnujgh"
+          >
+            <div
+              className="css-16ewyma"
+            >
+              <p
+                className="css-1ocwri7"
+              >
+                You have come from a humble social rank, but you could destined for so much more. Of course already the peoples those who are your home village regard you like their champion and also your destiny do call you to stand against the tyrants and also monsters those are threaten the common folk everywhere.
+              </p>
+            </div>
+          </div>
+        </div>
+      </td>
+    </tr>
+    <tr
+      className="css-0"
+      onClick={null}
+    >
+      <td
+        className="css-tiri1u"
+      >
+        Noble
+      </td>
+      <td
+        className="css-jasaoa"
+      >
+        <div
+          className="css-1sq1gba"
+        >
+          <div
+            className="css-in3yi3"
+          >
+            Gain all of
+          </div>
+          <div
+            className="css-1pnujgh"
+          >
+            History, Persuasion
+          </div>
+        </div>
+      </td>
+      <td
+        className="css-14yspz7"
+      >
+        <div
+          className="css-1sq1gba"
+        >
+          <div
+            className="css-in3yi3"
+          >
+            Position of Privilege
+          </div>
+          <div
+            className="css-1pnujgh"
+          >
+            <div
+              className="css-16ewyma"
+            >
+              <p
+                className="css-1ocwri7"
+              >
+                Actually, people are inclined to think the best of you, so you should thanks to your noble birth. The advantages of this feature are
+              </p>
+              <p
+                className="css-1ocwri7"
+              >
+                
+              </p>
+              <p
+                className="css-1ocwri7"
+              >
+                You’re always welcome in the high society and also all the people do start to assume that you have the right to be wherever you are.
+              </p>
+              <p
+                className="css-1ocwri7"
+              >
+                But the common folk and the merchants make each and every effort to accommodate you and also avoid the displeasure of your’s
+              </p>
+              <p
+                className="css-1ocwri7"
+              >
+                The other peoples who has high birth they treat you as a member of the same social sphere. If you need to secure an audience, you can secure with the local noble.
+              </p>
+              <p
+                className="css-1ocwri7"
+              >
+                
+              </p>
+            </div>
+          </div>
+        </div>
+      </td>
+    </tr>
+    <tr
+      className="css-0"
+      onClick={null}
+    >
+      <td
+        className="css-tiri1u"
+      >
+        Sage
+      </td>
+      <td
+        className="css-jasaoa"
+      >
+        <div
+          className="css-1sq1gba"
+        >
+          <div
+            className="css-in3yi3"
+          >
+            Gain all of
+          </div>
+          <div
+            className="css-1pnujgh"
+          >
+            Arcana, History
+          </div>
+        </div>
+      </td>
+      <td
+        className="css-14yspz7"
+      >
+        <div
+          className="css-1sq1gba"
+        >
+          <div
+            className="css-in3yi3"
+          >
+            Researcher
+          </div>
+          <div
+            className="css-1pnujgh"
+          >
+            <div
+              className="css-16ewyma"
+            >
+              <p
+                className="css-1ocwri7"
+              >
+                You know more oftenly like where and from whom you can able to obtain the information, that whenever you attempt to learn or recall the piece of lore, if you don’t have any idea about that specific information.
+              </p>
+              <p
+                className="css-1ocwri7"
+              >
+                
+              </p>
+              <p
+                className="css-1ocwri7"
+              >
+                From the other learned creature or person, from any library, from the scriptorium, from the university, this information usually comes.
+              </p>
+              <p
+                className="css-1ocwri7"
+              >
+                
+              </p>
+              <p
+                className="css-1ocwri7"
+              >
+                Here your Dungeon Master might rule the knowledge which you seek is secreted away in an almost inaccessible place or simply it can not be found.
+              </p>
+              <p
+                className="css-1ocwri7"
+              >
+                
+              </p>
+              <p
+                className="css-1ocwri7"
+              >
+                Unearthing the deepest secrets of the multiverse able to require an adventure or even the whole campaign.
+              </p>
+            </div>
+          </div>
+        </div>
+      </td>
+    </tr>
+    <tr
+      className="css-0"
+      onClick={null}
+    >
+      <td
+        className="css-tiri1u"
+      >
+        Soldier
+      </td>
+      <td
+        className="css-jasaoa"
+      >
+        <div
+          className="css-1sq1gba"
+        >
+          <div
+            className="css-in3yi3"
+          >
+            Gain all of
+          </div>
+          <div
+            className="css-1pnujgh"
+          >
+            Athletics, Intimidation
+          </div>
+        </div>
+      </td>
+      <td
+        className="css-14yspz7"
+      >
+        <div
+          className="css-1sq1gba"
+        >
+          <div
+            className="css-in3yi3"
+          >
+            Military Rank
+          </div>
+          <div
+            className="css-1pnujgh"
+          />
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;
+
 exports[`Storyshots Header Default Render 1`] = `
 <header
   className="css-1hfnl0x"
@@ -314,7 +745,7 @@ exports[`Storyshots Spell Fields/Components Default Render 1`] = `
 </div>
 `;
 
-exports[`Storyshots Spell Fields/Wrapper Default Render 1`] = `
+exports[`Storyshots Spell Fields/Description Default Render 1`] = `
 <div
   className="css-0"
 >
@@ -676,7 +1107,7 @@ exports[`Storyshots Spell card Homebrew Spell 1`] = `
           className="css-lc0qpe"
         >
           5th level
-
+           
           Illusion
         </p>
       </div>
@@ -690,7 +1121,7 @@ exports[`Storyshots Spell card Homebrew Spell 1`] = `
             <b>
               Casting time:
             </b>
-
+             
             1 action
           </p>
           <p
@@ -699,7 +1130,7 @@ exports[`Storyshots Spell card Homebrew Spell 1`] = `
             <b>
               Range:
             </b>
-
+             
             30 feet
           </p>
           <p
@@ -708,7 +1139,7 @@ exports[`Storyshots Spell card Homebrew Spell 1`] = `
             <b>
               Components:
             </b>
-
+             
             S, M
           </p>
           <p
@@ -717,7 +1148,7 @@ exports[`Storyshots Spell card Homebrew Spell 1`] = `
             <b>
               Duration:
             </b>
-
+             
             1 minute
           </p>
         </div>
@@ -807,7 +1238,7 @@ exports[`Storyshots Spell card Srd Spell 1`] = `
           className="css-lc0qpe"
         >
           2nd level
-
+           
           Enchantment
         </p>
       </div>
@@ -821,7 +1252,7 @@ exports[`Storyshots Spell card Srd Spell 1`] = `
             <b>
               Casting time:
             </b>
-
+             
             1 action
           </p>
           <p
@@ -830,7 +1261,7 @@ exports[`Storyshots Spell card Srd Spell 1`] = `
             <b>
               Range:
             </b>
-
+             
             Self
           </p>
           <p
@@ -839,7 +1270,7 @@ exports[`Storyshots Spell card Srd Spell 1`] = `
             <b>
               Components:
             </b>
-
+             
             V, S
           </p>
           <p
@@ -848,7 +1279,7 @@ exports[`Storyshots Spell card Srd Spell 1`] = `
             <b>
               Duration:
             </b>
-
+             
             Concentration, up to 1 hour
           </p>
         </div>
