@@ -1,0 +1,436 @@
+[
+  {
+    "name": "Dwarf (Hill)",
+    "speed": 25,
+    "ability_bonuses": [
+      [
+        0,
+        0,
+        2,
+        0,
+        1,
+        0
+      ]
+    ],
+    "flex_ability_bonuses": null,
+    "traits": [
+      {
+        "name": "Dwarven Resilience",
+        "desc": "You have advantage on saving throws against poison, and you have resistance against poison damage."
+      },
+      {
+        "name": "Stonecunning",
+        "desc": "Whenever you make an Intelligence (History) check related to the origin of stonework, you are considered proficient in the History skill and add double your proficiency bonus to the check, instead of your normal proficiency bonus."
+      },
+      {
+        "name": "Speed",
+        "desc": "Your speed is not reduced by wearing heavy armor."
+      },
+      {
+        "name": "Darkvision",
+        "desc": "Accustomed to life underground, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray."
+      },
+      {
+        "name": "Dwarven Combat Training",
+        "desc": "You have proficiency with the battleaxe, handaxe, light hammer, and warhammer."
+      },
+      {
+        "name": "Tool Proficiency",
+        "desc": "You gain proficiency with the artisan's tools of your choice: Smith's tools, brewer's supplies, or mason's tools."
+      },
+      {
+        "name": "Languages",
+        "desc": "You can speak, read, and write Common and Dwarvish. Dwarvish is full of hard consonants and guttural sounds, and those characteristics spill over into whatever other language a dwarf might speak."
+      },
+      {
+        "name": "Dwarven Toughness",
+        "desc": "Your hit point maximum increases by 1, and it increases by 1 every time you gain a level."
+      }
+    ]
+  },
+  {
+    "name": "Elf (High)",
+    "speed": 30,
+    "ability_bonuses": [
+      [
+        0,
+        2,
+        0,
+        1,
+        0,
+        0
+      ]
+    ],
+    "flex_ability_bonuses": null,
+    "traits": [
+      {
+        "name": "Fey Ancestry",
+        "desc": "You have advantage on saving throws against being charmed, and magic cannot put you to sleep."
+      },
+      {
+        "name": "Darkvision",
+        "desc": "Accustomed to twilit forests and the night sky, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray."
+      },
+      {
+        "name": "Keen Senses",
+        "desc": "You have proficiency in the Perception skill."
+      },
+      {
+        "name": "Trance",
+        "desc": "Elves don't need to sleep. Instead, they meditate deeply, remaining semiconscious, for 4 hours a day. (The Common word for such meditation is trance.) While meditating, you can dream after a fashion; such dreams are actually mental exercises that have become reflexive through years of practice. After resting in this way, you gain the same benefit that a human does from 8 hours of sleep. If you meditate during a long rest, you finish the rest after only 4 hours. You otherwise obey all the rules for a long rest; only the duration is changed."
+      },
+      {
+        "name": "Languages",
+        "desc": "You can speak, read, and write Common and Elvish. Elvish is fluid, with subtle intonations and intricate grammar. Elven literature is rich and varied, and their songs and poems are famous among other races. Many bards learn their language so they can add Elvish ballads to their repertoires."
+      },
+      {
+        "name": "Elf Weapon Training",
+        "desc": "You have proficiency with the longsword, shortsword, shortbow, and longbow."
+      },
+      {
+        "name": "Cantrip",
+        "desc": "You know one cantrip of your choice from the wizard spell list. Intelligence is your spellcasting ability for it."
+      },
+      {
+        "name": "Extra Language",
+        "desc": "You can speak, read, and write one extra language of your choosing."
+      }
+    ]
+  },
+  {
+    "name": "Halfling (Lightfoot)",
+    "speed": 25,
+    "ability_bonuses": [
+      [
+        0,
+        2,
+        0,
+        0,
+        0,
+        1
+      ]
+    ],
+    "flex_ability_bonuses": null,
+    "traits": [
+      {
+        "name": "Lucky",
+        "desc": "When you roll a 1 on the d20 for an attack roll, ability check, or saving throw, you can reroll the die and must use the new roll."
+      },
+      {
+        "name": "Brave",
+        "desc": "You have advantage on saving throw against being frghtened"
+      },
+      {
+        "name": "Halfling Nimbleness",
+        "desc": "You can move through the space of any creature that is of a size larger than yours."
+      },
+      {
+        "name": "Languages",
+        "desc": "You can speak, read, and write Common and Halfling. The Halfling language isn't secret, but halflings are loath to share it with others. They write very little, so they don't have a rich body of literature. Their oral tradition, however, is very strong. Almost all halflings speak Common to converse with the people in whose lands they dwell or through which they are traveling."
+      },
+      {
+        "name": "Naturally Stealthy",
+        "desc": "You can attempt to hide even when you are obscured only by a creature that is at least one size larger than you."
+      }
+    ]
+  },
+  {
+    "name": "Human",
+    "speed": 30,
+    "ability_bonuses": [
+      [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    ],
+    "flex_ability_bonuses": null,
+    "traits": [
+      {
+        "name": "Languages",
+        "desc": "You can speak, read, and write Common and one extra language of your choice. Humans typically learn the languages of other peoples they deal with, including obscure dialects. They are fond of sprinkling their speech with words borrowed from other tongues: Orc curses, Elvish musical expressions, Dwarvish military phrases, and so on."
+      }
+    ]
+  },
+  {
+    "name": "Dragonborn",
+    "speed": 30,
+    "ability_bonuses": [
+      [
+        2,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    ],
+    "flex_ability_bonuses": null,
+    "traits": [
+      {
+        "name": "Breath Weapon",
+        "desc": "You can use your action to exhale destructive energy. Your draconic ancestry determines the size, shape, and damage type of the exhalation.\nWhen you use your breath weapon, each creature in the area of the exhalation must make a saving throw, the type of which is determined by your draconic ancesry. The DC for this saving throw equals 8 + your Constitution modifier + your proficiency bonus. A creature takes 2d6 damage on a failed save, and half as much damage on a successful one. The damage increases to 2d6 at 6th level, 3d6 at 11th level, and 5d6 at 16th level.\nAfter you use your breath weapon, you cannot use it again until you complete a short or long rest."
+      },
+      {
+        "name": "Draconic Ancestry",
+        "desc": "You have draconic ancestry. Choose one type of dragon from the Draconic Ancestry table. Your breath weapon and damage resistance are determined by the dragon type, as shown in the table."
+      },
+      {
+        "name": "Damage Resistance",
+        "desc": "You have resistance to the damage type associated with your draconic ancestry."
+      },
+      {
+        "name": "Languages",
+        "desc": "You can speak, read, and write Common and Draconic. Draconic is thought to be one of the oldest languages and is often used in the study of magic. The language sounds harsh to most other creatures and includes numerous hard consonants and sibilants."
+      }
+    ]
+  },
+  {
+    "name": "Gnome (Rock)",
+    "speed": 25,
+    "ability_bonuses": [
+      [
+        0,
+        0,
+        1,
+        2,
+        0,
+        0
+      ]
+    ],
+    "flex_ability_bonuses": null,
+    "traits": [
+      {
+        "name": "Gnome Cunning",
+        "desc": "You have advantage on all Intelligence, Wisdom, and Charisma saving throws against magic."
+      },
+      {
+        "name": "Darkvision",
+        "desc": "Accustomed to life underground, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray."
+      },
+      {
+        "name": "Languages",
+        "desc": "You can speak, read, and write Common and Gnomish. The Gnomish language, which uses the Dwarvish script, is renowned for its technical treatises and its catalogs of knowledge about the natural world."
+      },
+      {
+        "name": "Artificer's Lore",
+        "desc": "Whenever you make an Intelligence (History) check related to magic items, alchemical objects, or technological devices, you can add twice your proficiency bonus, instead of any proficiency bonus you normally apply."
+      },
+      {
+        "name": "Tinker",
+        "desc": "You have proficiency with artisan's tools (tinker's tools). Using those tools, you can spend 1 hour and 10 gp worth of materials to construct a Tiny clockwork device (AC 5, 1 hp). The device ceases to function after 24 hours (unless you spend 1 hour repairing it to keep the device functioning), or when you use your action to dismantle it; at that time, you can reclaim the materials used to create it. You can have up to three such devices active at a time."
+      },
+      {
+        "name": "Clockwork Toy",
+        "desc": "You can create it. This toy is a clockwork animal, monster, or person, such as a frog, mouse, bird, dragon, or soldier. When placed on the ground, the toy moves 5 feet across the ground on each of your turns in a random direction. It makes noises as appropriate to the creature it represents."
+      },
+      {
+        "name": "Fire Starter",
+        "desc": "You can create it. The device produces a miniature flame, which you can use to light a candle, torch, or campfire. Using the device requires your action."
+      },
+      {
+        "name": "Music Box",
+        "desc": "You can create it. When opened, this music box plays a single song at a moderate volume. The box stops playing when it reaches the song's end or when it is closed."
+      }
+    ]
+  },
+  {
+    "name": "Half-Elf",
+    "speed": 30,
+    "ability_bonuses": [
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        2
+      ]
+    ],
+    "flex_ability_bonuses": [
+      "1",
+      "1"
+    ],
+    "traits": [
+      {
+        "name": "Fey Ancestry",
+        "desc": "You have advantage on saving throws against being charmed, and magic cannot put you to sleep."
+      },
+      {
+        "name": "Skill Versatility",
+        "desc": "You gain proficiency in two skills of your choice."
+      },
+      {
+        "name": "Darkvision",
+        "desc": "Thanks to your elf blood, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray."
+      },
+      {
+        "name": "Languages",
+        "desc": "You can speak, read, and write Common, Elvish, and one extra language of your choice."
+      }
+    ]
+  },
+  {
+    "name": "Half-Orc",
+    "speed": 30,
+    "ability_bonuses": [
+      [
+        2,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    ],
+    "flex_ability_bonuses": null,
+    "traits": [
+      {
+        "name": "Savage Attacks",
+        "desc": "When you score a critical hit with a melee weapon attack, you can roll one of the weapon's damage dice one additional time and add it to the extra damge of the critical hit."
+      },
+      {
+        "name": "Darkvision",
+        "desc": "Thanks to your orc blood, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray."
+      },
+      {
+        "name": "Menacing",
+        "desc": "You gain proficiency in the Intimidation skill."
+      },
+      {
+        "name": "Relentless Endurance",
+        "desc": "When you are reduced to 0 hit points but not killed outright, you can drop to 1 hit point instead. You can't use this feature again until you finish a long rest."
+      },
+      {
+        "name": "Languages",
+        "desc": "You can speak, read, and write Common and Orc. Orc is a harsh, grating language with hard consonants. It has no script of its own but is written in the Dwarvish script."
+      }
+    ]
+  },
+  {
+    "name": "Tiefling",
+    "speed": 30,
+    "ability_bonuses": [
+      [
+        0,
+        0,
+        0,
+        1,
+        0,
+        2
+      ]
+    ],
+    "flex_ability_bonuses": null,
+    "traits": [
+      {
+        "name": "Hellish Resistance",
+        "desc": "You have resistance to fire damage."
+      },
+      {
+        "name": "Darkvision",
+        "desc": "Thanks to your infernal heritage, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray."
+      },
+      {
+        "name": "Languages",
+        "desc": "You can speak, read, and write Common and Infernal."
+      },
+      {
+        "name": "Infernal Legacy",
+        "desc": "You know the thaumaturgy cantrip. Once you reach 3rd level, you can cast the hellish rebuke spell as a 2nd-level spell; you must finish a long rest in order to cast the spell again using this trait. Once you reach 5th level, you can also cast the darkness spell; you must finish a long rest in order to cast the spell again using this trait. Charisma is your spellcasting ability for these spells."
+      }
+    ]
+  },
+  {
+    "name": "Ascended",
+    "speed": 30,
+    "ability_bonuses": [
+      [
+        0,
+        0,
+        0,
+        0,
+        1,
+        2
+      ]
+    ],
+    "flex_ability_bonuses": null,
+    "traits": [
+
+    ]
+  },
+  {
+    "name": "Catfolk",
+    "speed": 30,
+    "ability_bonuses": [
+      [
+        0,
+        2,
+        0,
+        0,
+        0,
+        1
+      ]
+    ],
+    "flex_ability_bonuses": null,
+    "traits": [
+
+    ]
+  },
+  {
+    "name": "Elementals",
+    "speed": 30,
+    "ability_bonuses": [
+      [
+        0,
+        0,
+        2,
+        0,
+        0,
+        0
+      ]
+    ],
+    "flex_ability_bonuses": null,
+    "traits": [
+
+    ]
+  },
+  {
+    "name": "Giantspawn",
+    "speed": 30,
+    "ability_bonuses": [
+      [
+        2,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    ],
+    "flex_ability_bonuses": null,
+    "traits": [
+
+    ]
+  },
+  {
+    "name": "Living Construct",
+    "speed": 30,
+    "ability_bonuses": [
+      [
+        1,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    ],
+    "flex_ability_bonuses": null,
+    "traits": [
+
+    ]
+  }
+]

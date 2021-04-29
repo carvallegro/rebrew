@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Acolyte",
+    "feature": "Shelter of the Faithful",
+    "desc": null,
+    "skills_count_choose": 0,
+    "skills": [
+      "Insight",
+      "Religion"
+    ]
+  },
+  {
+    "name": "Criminal / Spy",
+    "feature": "Criminal Contact",
+    "desc": null,
+    "skills_count_choose": 0,
+    "skills": [
+      "Deception",
+      "Stealth"
+    ]
+  },
+  {
+    "name": "Folk Hero",
+    "feature": "Rustic Hospitality",
+    "desc": null,
+    "skills_count_choose": 0,
+    "skills": [
+      "Animal Handling",
+      "Survival"
+    ]
+  },
+  {
+    "name": "Noble",
+    "feature": "Position of Privilege",
+    "desc": null,
+    "skills_count_choose": 0,
+    "skills": [
+      "History",
+      "Persuasion"
+    ]
+  },
+  {
+    "name": "Sage",
+    "feature": "Researcher",
+    "desc": null,
+    "skills_count_choose": 0,
+    "skills": [
+      "Arcana",
+      "History"
+    ]
+  },
+  {
+    "name": "Soldier",
+    "feature": "Military Rank",
+    "desc": null,
+    "skills_count_choose": 0,
+    "skills": [
+      "Athletics",
+      "Intimidation"
+    ]
+  }
+]

@@ -1,6 +1,16 @@
 import * as R from 'ramda'
 import React, { useState } from 'react'
-import { DataTable, InfoLabel } from 'bold-ui'
+import {
+  Button,
+  Icon,
+  InfoLabel,
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow
+} from 'bold-ui'
 
 import NewlinesToParagraphs from '../newlines-to-paragraphs'
 
@@ -14,65 +24,96 @@ const cellStyle = {
 }
 
 const BackgroundTable = ({ backgrounds = [] }) => {
-  const [sort, setSort] = useState(['name'])
+  const [sort, setSort] = useState(['name', false])
 
   const rows = R.pipe(
-    R.sortBy(R.prop('name')),
-    sort[0] === '-name' ? R.reverse : R.identity
+    R.sortBy(R.prop(sort[0])),
+    sort[1] ? R.reverse : R.identity
   )(backgrounds)
 
   return (
-    <DataTable
-      rows={rows}
-      sort={sort}
-      style={tableStyle}
-      onSortChange={setSort}
-      loading={false}
-      columns={[
-        {
-          name: 'name',
-          header: 'Name',
-          sortable: true,
-          style: {
-            ...cellStyle,
-            width: '150px'
-          },
-          render: item => item.name
-        },
-        {
-          name: 'proficiencies',
-          header: 'Proficiencies',
-          style: {
-            ...cellStyle,
-            width: '250px'
-          },
-          render: item => (
-            <InfoLabel
-              title={`Gain ${
-                item.skills_count_choose === 0
-                  ? 'all'
-                  : item.skills_count_choose
-              } of`}
-            >
-              {item.skills.join(', ')}
-            </InfoLabel>
-          )
-        },
-        {
-          name: 'feature',
-          header: 'Features',
-          style: {
-            ...cellStyle,
-            minWidth: '250px'
-          },
-          render: item => (
-            <InfoLabel placeholder="-" title={item.feature}>
-              {item.desc && <NewlinesToParagraphs text={item.desc} />}
-            </InfoLabel>
-          )
-        }
-      ]}
-    />
+    <Table style={tableStyle}>
+      <TableHead>
+        <TableRow>
+          <TableHeader
+            onSortChange={setSort}
+            sortDirection="ASC"
+            sortable
+            style={{
+              ...cellStyle,
+              width: '150px'
+            }}
+          >
+            Name
+          </TableHeader>
+          <TableHeader
+            onSortChange={function noRefCheck() {}}
+            sortDirection=""
+            sortable={false}
+            style={{
+              ...cellStyle,
+              width: '250px'
+            }}
+          >
+            Proficiencies
+          </TableHeader>
+          <TableHeader
+            onSortChange={function noRefCheck() {}}
+            sortDirection=""
+            sortable={false}
+            style={{
+              ...cellStyle,
+              width: '250px'
+            }}
+          >
+            Features
+          </TableHeader>
+          <TableHeader
+            style={{
+              ...cellStyle,
+              width: '100px'
+            }}
+          >
+            Test
+          </TableHeader>
+        </TableRow>
+      </TableHead>
+      <TableBody>
+        {rows.map(background => (
+          <TableRow key={background.name}>
+            <TableCell style={cellStyle}>{background.name}</TableCell>
+            <TableCell style={cellStyle}>
+              <InfoLabel
+                title={`Gain ${
+                  background.skills_count_choose === 0
+                    ? 'all'
+                    : background.skills_count_choose
+                } of`}
+              >
+                {background.skills.join(', ')}
+              </InfoLabel>
+            </TableCell>
+            <TableCell style={cellStyle}>
+              <InfoLabel placeholder="-" title={background.feature}>
+                {background.desc && (
+                  <NewlinesToParagraphs text={background.desc} />
+                )}
+              </InfoLabel>
+            </TableCell>
+            <TableCell>
+              <Button
+                kind="normal"
+                onClick={function noRefCheck() {}}
+                size="small"
+                skin="ghost"
+              >
+                <Icon icon="adjust" size={1.5} />
+              </Button>
+            </TableCell>
+          </TableRow>
+        ))}
+      </TableBody>
+    </Table>
   )
 }
 

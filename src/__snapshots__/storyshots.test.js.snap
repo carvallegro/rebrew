@@ -82,6 +82,162 @@ exports[`Storyshots Application Layout Default Render 1`] = `
 </div>
 `;
 
+exports[`Storyshots Background Fields/Description Default Render 1`] = `
+<div
+  className="css-0"
+>
+  <label
+    className="css-1tdx2hb"
+    htmlFor="desc"
+  >
+    Description
+    <span
+      className="css-fpulsy"
+      title="Required field"
+    >
+      *
+    </span>
+  </label>
+  <textarea
+    className="css-15ndqf0"
+    id="desc"
+    name="desc"
+    placeholder="Enter the description"
+    required={true}
+  />
+</div>
+`;
+
+exports[`Storyshots Background Fields/Feat name Default Render 1`] = `
+<div
+  className="css-0"
+>
+  <label
+    className="css-1tdx2hb"
+    htmlFor="feature"
+  >
+    Feat name
+    <span
+      className="css-fpulsy"
+      title="Required field"
+    >
+      *
+    </span>
+  </label>
+  <div
+    className="css-o1mvac"
+  >
+    <input
+      className="css-15ndqf0"
+      id="feature"
+      name="feature"
+      placeholder="Enter the background feat name"
+      required={true}
+      type="text"
+    />
+  </div>
+</div>
+`;
+
+exports[`Storyshots Background Fields/Name Default Render 1`] = `
+<div
+  className="css-0"
+>
+  <label
+    className="css-1tdx2hb"
+    htmlFor="name"
+  >
+    Name
+    <span
+      className="css-fpulsy"
+      title="Required field"
+    >
+      *
+    </span>
+  </label>
+  <div
+    className="css-o1mvac"
+  >
+    <input
+      className="css-15ndqf0"
+      id="name"
+      name="name"
+      placeholder="Enter the background name"
+      required={true}
+      type="text"
+    />
+  </div>
+</div>
+`;
+
+exports[`Storyshots Background Fields/Proficiencies Default Render 1`] = `
+<div>
+  <button
+    className="css-5sb8u8"
+    onClick={[Function]}
+    type="button"
+  >
+    <span>
+      <span
+        className="css-ssl38d"
+      >
+        Choose a value
+      </span>
+      <svg
+        aria-hidden="true"
+        className="css-uvmzbi"
+        height="1em"
+        role="img"
+        viewBox="0 0 24 24"
+        width="1em"
+      >
+        <path
+          d="M16.294 8.294a1 1 0 111.414 1.414l-5 5a1 1 0 01-1.414 0l-5.001-5a1 1 0 011.414-1.415l4.294 4.294 4.293-4.293z"
+        />
+      </svg>
+    </span>
+  </button>
+  <div
+    className="css-0"
+  >
+    <div
+      className="css-0"
+    >
+      <div
+        aria-expanded={false}
+        aria-haspopup="listbox"
+        aria-labelledby="downshift-0-label"
+        aria-owns={null}
+        role="combobox"
+      >
+        <div
+          className="css-7bq0j0"
+          onClick={[Function]}
+        >
+          <input
+            aria-activedescendant={null}
+            aria-autocomplete="list"
+            aria-controls={null}
+            autoComplete="off"
+            className="css-1hneurt"
+            id="downshift-0-input"
+            name="favorite pasta"
+            onBlur={[Function]}
+            onChange={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            required={true}
+            type="text"
+            value=""
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Backgrounds Table Default Render 1`] = `
 <table
   className="css-1iy4mqq"
@@ -713,7 +869,7 @@ exports[`Storyshots Spell Fields/Components Default Render 1`] = `
     <div
       aria-expanded={false}
       aria-haspopup="listbox"
-      aria-labelledby="downshift-0-label"
+      aria-labelledby="downshift-1-label"
       aria-owns={null}
       role="combobox"
     >
@@ -727,7 +883,7 @@ exports[`Storyshots Spell Fields/Components Default Render 1`] = `
           aria-controls={null}
           autoComplete="off"
           className="css-1hneurt"
-          id="downshift-0-input"
+          id="downshift-1-input"
           name="components"
           onBlur={[Function]}
           onChange={[Function]}
@@ -824,7 +980,7 @@ exports[`Storyshots Spell Fields/School Default Render 1`] = `
     <div
       aria-expanded={false}
       aria-haspopup="listbox"
-      aria-labelledby="downshift-1-label"
+      aria-labelledby="downshift-2-label"
       aria-owns={null}
       className="css-0"
       role="combobox"
@@ -839,7 +995,7 @@ exports[`Storyshots Spell Fields/School Default Render 1`] = `
             aria-controls={null}
             autoComplete="off"
             className="css-15ndqf0"
-            id="downshift-1-input"
+            id="downshift-2-input"
             name="school"
             onBlur={[Function]}
             onChange={[Function]}
@@ -968,7 +1124,7 @@ exports[`Storyshots Spell Fields/Type Default Render 1`] = `
     <div
       aria-expanded={false}
       aria-haspopup="listbox"
-      aria-labelledby="downshift-2-label"
+      aria-labelledby="downshift-3-label"
       aria-owns={null}
       className="css-0"
       role="combobox"
@@ -983,7 +1139,7 @@ exports[`Storyshots Spell Fields/Type Default Render 1`] = `
             aria-controls={null}
             autoComplete="off"
             className="css-15ndqf0"
-            id="downshift-2-input"
+            id="downshift-3-input"
             name="level_number"
             onBlur={[Function]}
             onChange={[Function]}
